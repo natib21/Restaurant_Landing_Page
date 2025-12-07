@@ -1,9 +1,8 @@
-
-import { Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./component/Layout/Layout";
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './component/Layout/Layout';
 // import ScrollToTop from "./component/ScrollTop";
 
-import Home from "./pages/Home"
+import Home from './pages/Home';
 // import Pricing from "./pages/Pricing";
 // import Resources from "./pages/Resources";
 // import NotFound from "./pages/NotFound";
@@ -34,9 +33,7 @@ function App() {
     <>
       {/* <ScrollToTop /> */}
       <Routes>
-      
         <Route element={<Layout />}>
-        
           <Route path="/" element={<Home />} />
 
           {/* FEATURES — All in features/ folder */}
