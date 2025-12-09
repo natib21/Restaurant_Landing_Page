@@ -8,13 +8,10 @@ export default function Layout() {
   return (
     <>
       <ScrollToTop />
-
       <Header />
-
       <main className="min-h-screen pb-16 bg-gray-50">
         <Outlet />
       </main>
-
       <Footer />
     </>
   );
