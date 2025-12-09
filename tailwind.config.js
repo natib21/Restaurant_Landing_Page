@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        merienda: ["Merienda", "cursive"],
-        handwriting: ["Merienda", "cursive", "system-ui"],
+        merienda: ['Merienda', 'cursive'],
+        handwriting: ['Merienda', 'cursive', 'system-ui'],
       },
     },
   },
