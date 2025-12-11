@@ -22,10 +22,26 @@ import {
 
 // Why Choose Digital Menu
 const digitalMenuWhyChooseUs = [
-  { title: 'Stunning Mobile Design', icon: Smartphone, desc: 'Looks beautiful on every phone — no cheap PDF' },
-  { title: 'Add Food Photos', icon: Camera, desc: 'Show your delicious dishes — customers order more' },
-  { title: 'Your Branding', icon: Palette, desc: 'Logo, colors, fonts — feels like your restaurant' },
-  { title: 'Amharic + English', icon: Languages, desc: 'Full bilingual — customers switch instantly' },
+  {
+    title: 'Stunning Mobile Design',
+    icon: Smartphone,
+    desc: 'Looks beautiful on every phone — no cheap PDF',
+  },
+  {
+    title: 'Add Food Photos',
+    icon: Camera,
+    desc: 'Show your delicious dishes — customers order more',
+  },
+  {
+    title: 'Your Branding',
+    icon: Palette,
+    desc: 'Logo, colors, fonts — feels like your restaurant',
+  },
+  {
+    title: 'Amharic + English',
+    icon: Languages,
+    desc: 'Full bilingual — customers switch instantly',
+  },
   { title: 'Update in 1 Second', icon: Zap, desc: 'Change price, hide item — live immediately' },
   { title: 'Works Offline', icon: Shield, desc: 'Menu loads fast even without internet' },
   { title: 'Customer Favorites', icon: Heart, desc: 'Highlight most popular items first' },
@@ -97,7 +113,11 @@ export default function DigitalMenu() {
             imageSrc="/images/digital-menu-design.webp"
             imageAlt="Beautiful mobile menu"
             features={[
-              { icon: Camera, title: 'High-Quality Photos', desc: 'Upload your own mouth-watering images' },
+              {
+                icon: Camera,
+                title: 'High-Quality Photos',
+                desc: 'Upload your own mouth-watering images',
+              },
               { icon: Palette, title: 'Your Branding', desc: 'Logo, colors, fonts — 100% yours' },
               { icon: Smartphone, title: 'Mobile-First', desc: 'Fast loading, touch-friendly' },
               { icon: Heart, title: 'Customer Favorites', desc: 'Highlight top-selling items' },

@@ -98,10 +98,26 @@ export default function WebsiteBuilder() {
             imageSrc="/images/website-design.webp"
             imageAlt="Beautiful restaurant website"
             features={[
-              { icon: Palette, title: 'Premium Templates', desc: 'Designed specifically for cafes & restaurants' },
-              { icon: Camera, title: 'Food Photography Ready', desc: 'Show your dishes in full glory' },
-              { icon: Smartphone, title: 'Perfect on Mobile', desc: '90% of customers browse on phone' },
-              { icon: Star, title: 'Trust & Professionalism', desc: 'Customers trust real websites more' },
+              {
+                icon: Palette,
+                title: 'Premium Templates',
+                desc: 'Designed specifically for cafes & restaurants',
+              },
+              {
+                icon: Camera,
+                title: 'Food Photography Ready',
+                desc: 'Show your dishes in full glory',
+              },
+              {
+                icon: Smartphone,
+                title: 'Perfect on Mobile',
+                desc: '90% of customers browse on phone',
+              },
+              {
+                icon: Star,
+                title: 'Trust & Professionalism',
+                desc: 'Customers trust real websites more',
+              },
             ]}
           />
 
@@ -119,7 +135,11 @@ export default function WebsiteBuilder() {
             imageSrc="/images/website-menu-whatsapp.webp"
             imageAlt="Menu with WhatsApp ordering"
             features={[
-              { icon: MessageCircle, title: 'WhatsApp Orders', desc: 'Direct chat — no delivery apps' },
+              {
+                icon: MessageCircle,
+                title: 'WhatsApp Orders',
+                desc: 'Direct chat — no delivery apps',
+              },
               { icon: Languages, title: 'Bilingual Menu', desc: 'English + አማርኛ with one click' },
               { icon: Zap, title: 'Real-Time Updates', desc: 'Price change? Live instantly' },
               { icon: QrCode, title: 'QR Code Ready', desc: 'Print once, use forever' },

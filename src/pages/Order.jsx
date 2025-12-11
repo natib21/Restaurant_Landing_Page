@@ -25,7 +25,11 @@ import {
 
 // Why Choose Order Management
 const orderWhyChooseUs = [
-  { title: 'No More Shouting', icon: Zap, desc: 'Orders fly straight to kitchen — no paper, no noise' },
+  {
+    title: 'No More Shouting',
+    icon: Zap,
+    desc: 'Orders fly straight to kitchen — no paper, no noise',
+  },
   { title: 'From Any Source', icon: ShoppingCart, desc: 'QR, website, tablet — all in one system' },
   { title: 'Real-Time Kitchen', icon: BellRing, desc: 'New orders pop up instantly on screen' },
   { title: 'Track Every Order', icon: Users, desc: 'Know exactly who ordered what' },
@@ -100,9 +104,17 @@ export default function OrderManagement() {
             imageSrc="/images/order-sources.webp"
             imageAlt="Multiple order channels"
             features={[
-              { icon: QrCode, title: 'QR Table Ordering', desc: 'Customer scans to orders directly' },
+              {
+                icon: QrCode,
+                title: 'QR Table Ordering',
+                desc: 'Customer scans to orders directly',
+              },
               { icon: Globe, title: 'Website Orders', desc: 'Pickup & delivery from your site' },
-              { icon: Smartphone, title: 'Waiter Tablet', desc: 'Fast & accurate table-side ordering' },
+              {
+                icon: Smartphone,
+                title: 'Waiter Tablet',
+                desc: 'Fast & accurate table-side ordering',
+              },
               { icon: Bike, title: 'Delivery Apps', desc: 'Connect with external riders' },
             ]}
           />
@@ -122,7 +134,11 @@ export default function OrderManagement() {
             imageAlt="Real-time kitchen screen"
             features={[
               { icon: Zap, title: 'Instant Alert', desc: 'New order to beep + highlight' },
-              { icon: Clock, title: 'Cooking Timer', desc: 'Know how long each order has been waiting' },
+              {
+                icon: Clock,
+                title: 'Cooking Timer',
+                desc: 'Know how long each order has been waiting',
+              },
               { icon: BellRing, title: 'Mark as Ready', desc: 'One tap to waiter notified' },
               { icon: Shield, title: 'Works Offline', desc: 'Kitchen screen stays live' },
             ]}

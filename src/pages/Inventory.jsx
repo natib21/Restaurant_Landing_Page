@@ -25,14 +25,42 @@ import {
 
 // Dedicated Why Choose for Inventory
 const inventoryWhyChooseUs = [
-  { title: 'Real-Time Stock Tracking', icon: Package, desc: 'Know exactly how much teff, coffee, or meat you have — across all branches' },
-  { title: 'Low Stock Alerts', icon: BellRing, desc: 'Get notified before injera or berbere runs out' },
-  { title: 'Works Offline', icon: Smartphone, desc: 'Track stock even when internet is down — syncs automatically' },
-  { title: 'Multi-Branch Sync', icon: Store, desc: 'See total stock or per-branch — one dashboard' },
-  { title: 'Auto Deduct on Sale', icon: ArrowDown, desc: 'Every order reduces stock instantly — no manual entry' },
-  { title: 'Supplier Management', icon: Truck, desc: 'Track who supplies what and when to reorder' },
+  {
+    title: 'Real-Time Stock Tracking',
+    icon: Package,
+    desc: 'Know exactly how much teff, coffee, or meat you have — across all branches',
+  },
+  {
+    title: 'Low Stock Alerts',
+    icon: BellRing,
+    desc: 'Get notified before injera or berbere runs out',
+  },
+  {
+    title: 'Works Offline',
+    icon: Smartphone,
+    desc: 'Track stock even when internet is down — syncs automatically',
+  },
+  {
+    title: 'Multi-Branch Sync',
+    icon: Store,
+    desc: 'See total stock or per-branch — one dashboard',
+  },
+  {
+    title: 'Auto Deduct on Sale',
+    icon: ArrowDown,
+    desc: 'Every order reduces stock instantly — no manual entry',
+  },
+  {
+    title: 'Supplier Management',
+    icon: Truck,
+    desc: 'Track who supplies what and when to reorder',
+  },
   { title: 'Waste & Theft Control', icon: AlertTriangle, desc: 'Spot unusual drops instantly' },
-  { title: 'Print Reorder Lists', icon: Printer, desc: 'One-click list for market day — no guessing' },
+  {
+    title: 'Print Reorder Lists',
+    icon: Printer,
+    desc: 'One-click list for market day — no guessing',
+  },
 ];
 
 const Inventory = () => {
@@ -45,7 +73,7 @@ const Inventory = () => {
             badge="Never Run Out of Injera Again"
             heading={
               <>
-                Smart Inventory 
+                Smart Inventory
                 <br />
                 <span className="text-blue-900 font-merienda">For Ethiopian Restaurants</span>
               </>
@@ -80,7 +108,8 @@ const Inventory = () => {
               </>
             }
           >
-            No more “We’re out of shiro” surprises. No more buying too much. No more late-night Excel stress.
+            No more “We’re out of shiro” surprises. No more buying too much. No more late-night
+            Excel stress.
           </SectionHeader>
         </div>
       </section>
@@ -88,7 +117,6 @@ const Inventory = () => {
       {/* Core Features */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-6 grid gap-20">
-
           {/* Real-Time Tracking */}
           <FeatureHighlight
             badge="Live Stock Levels"
@@ -103,10 +131,18 @@ const Inventory = () => {
             imageSrc="/images/inventory-dashboard.webp"
             imageAlt="Live inventory dashboard"
             features={[
-              { icon: Package, title: 'All Items Tracked', desc: 'Teff, berbere, meat, coffee, drinks — everything' },
+              {
+                icon: Package,
+                title: 'All Items Tracked',
+                desc: 'Teff, berbere, meat, coffee, drinks — everything',
+              },
               { icon: Store, title: 'Per-Branch View', desc: 'Switch between locations instantly' },
               { icon: Smartphone, title: 'Mobile Access', desc: 'Check stock while at the market' },
-              { icon: Zap, title: 'Auto Update on Sale', desc: 'Every order deducts stock immediately' },
+              {
+                icon: Zap,
+                title: 'Auto Update on Sale',
+                desc: 'Every order deducts stock immediately',
+              },
             ]}
           />
 
@@ -127,9 +163,17 @@ const Inventory = () => {
             imageAlt="Low stock notification"
             features={[
               { icon: BellRing, title: 'Custom Thresholds', desc: 'You decide when to be alerted' },
-              { icon: AlertTriangle, title: 'Critical Alerts', desc: 'Red alert when dangerously low' },
+              {
+                icon: AlertTriangle,
+                title: 'Critical Alerts',
+                desc: 'Red alert when dangerously low',
+              },
               { icon: Smartphone, title: 'Push + SMS', desc: 'Never miss an alert' },
-              { icon: UserCheck, title: 'Assign to Staff', desc: 'Chef, manager, or owner gets notified' },
+              {
+                icon: UserCheck,
+                title: 'Assign to Staff',
+                desc: 'Chef, manager, or owner gets notified',
+              },
             ]}
           />
 
@@ -148,7 +192,11 @@ const Inventory = () => {
             imageAlt="Inventory variance report"
             features={[
               { icon: ArrowDown, title: 'Auto vs Actual', desc: 'Compare used vs sold' },
-              { icon: AlertTriangle, title: 'Variance Alerts', desc: 'Unusual drops flagged immediately' },
+              {
+                icon: AlertTriangle,
+                title: 'Variance Alerts',
+                desc: 'Unusual drops flagged immediately',
+              },
               { icon: History, title: 'Full Audit Trail', desc: 'Who adjusted what and when' },
               { icon: Scale, title: 'Weigh & Track', desc: 'Perfect for meat, flour, oil' },
             ]}
@@ -172,7 +220,11 @@ const Inventory = () => {
             ctaText="See Reorder Magic"
             ctaLink="/contact"
             features={[
-              { icon: ShoppingCart, title: 'Auto Shopping List', desc: 'Print or send to supplier' },
+              {
+                icon: ShoppingCart,
+                title: 'Auto Shopping List',
+                desc: 'Print or send to supplier',
+              },
               { icon: Truck, title: 'Supplier History', desc: 'Who supplied what last time' },
               { icon: Printer, title: 'Print Ready', desc: 'Market day? Just print and go' },
               { icon: ArrowUp, title: 'Price Tracking', desc: 'See if berbere price went up' },
@@ -237,9 +289,14 @@ const Inventory = () => {
               className="group inline-flex items-center gap-3 rounded-xl bg-white px-10 py-5 text-xl font-bold text-blue-900 shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
             >
               Start Free Trial
-              <span className="transform transition-transform group-hover:translate-x-2">Arrow Right</span>
+              <span className="transform transition-transform group-hover:translate-x-2">
+                Arrow Right
+              </span>
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition"
+            >
               Book Inventory Demo
               <span>Arrow Right</span>
             </Link>

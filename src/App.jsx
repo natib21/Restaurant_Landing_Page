@@ -9,9 +9,9 @@ import POS from './pages/POS';
 import QRMenu from './pages/QrCodeMenu';
 import OrderManagement from './pages/Order';
 import TableManagement from './pages/Table';
-import Menu from './pages/Menu'
-import WebBuilder from './pages/WebsiteBuilder'
-import Customer from './pages/Customer'
+import Menu from './pages/Menu';
+import WebBuilder from './pages/WebsiteBuilder';
+import Customer from './pages/Customer';
 import MultiBranch from './pages/MultiBranch';
 import MultiMenu from './pages/MultiMenu';
 import Inventory from './pages/Inventory';
@@ -53,16 +53,16 @@ function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="pos" element={<POS />} />
           <Route path="qr-menu" element={<QRMenu />} />
-          <Route path='order' element={<OrderManagement />}/>
-          <Route path='table' element={<TableManagement />} />
-          <Route path='menu' element={<Menu />} />
+          <Route path="order" element={<OrderManagement />} />
+          <Route path="table" element={<TableManagement />} />
+          <Route path="menu" element={<Menu />} />
           <Route path="website-builder" element={<WebBuilder />} />
-          <Route path='customer' element={<Customer />} />
-          <Route path='multi-branch' element={<MultiBranch />} />
-          <Route path='multi-menu' element={<MultiMenu />} />
-          <Route path='inventory' element={<Inventory />} />
-          <Route path='payment-integration' element={<PaymentIntegration />} />
-          <Route path='delivery-managment' element={<DeliveryManagement />} />
+          <Route path="customer" element={<Customer />} />
+          <Route path="multi-branch" element={<MultiBranch />} />
+          <Route path="multi-menu" element={<MultiMenu />} />
+          <Route path="inventory" element={<Inventory />} />
+          <Route path="payment-integration" element={<PaymentIntegration />} />
+          <Route path="delivery-managment" element={<DeliveryManagement />} />
           {/* FEATURES — All in features/ folder */}
           {/* 
             <Route index element={<POS />} />

@@ -23,9 +23,21 @@ import {
 // Why Choose Table Management
 const tableWhyChooseUs = [
   { title: 'Every Table Has QR', icon: QrCode, desc: 'Print once — customers scan & order' },
-  { title: 'Live Table Status', icon: TableIcon, desc: 'Free, occupied, needs cleaning — at a glance' },
-  { title: 'Call Waiter Button', icon: BellRing, desc: 'Customer presses → waiter notified instantly' },
-  { title: 'Move & Merge Tables', icon: ArrowRightLeft, desc: 'Customer moved? Transfer bill in 2 seconds' },
+  {
+    title: 'Live Table Status',
+    icon: TableIcon,
+    desc: 'Free, occupied, needs cleaning — at a glance',
+  },
+  {
+    title: 'Call Waiter Button',
+    icon: BellRing,
+    desc: 'Customer presses → waiter notified instantly',
+  },
+  {
+    title: 'Move & Merge Tables',
+    icon: ArrowRightLeft,
+    desc: 'Customer moved? Transfer bill in 2 seconds',
+  },
   { title: 'Waiter Assignment', icon: Users, desc: 'Each waiter sees only their tables' },
   { title: 'Works Offline', icon: Shield, desc: 'Table system runs even without internet' },
   { title: 'Floor Plan View', icon: Store, desc: 'See your restaurant layout live' },
@@ -120,7 +132,11 @@ export default function TableManagement() {
             features={[
               { icon: Eye, title: 'Real-Time Status', desc: 'Free / Occupied / Cleaning' },
               { icon: Store, title: 'Custom Layout', desc: 'Drag tables to match your restaurant' },
-              { icon: Clock, title: 'Time Tracking', desc: 'Know how long customers have been sitting' },
+              {
+                icon: Clock,
+                title: 'Time Tracking',
+                desc: 'Know how long customers have been sitting',
+              },
               { icon: Smartphone, title: 'Mobile View', desc: 'Manager checks from phone' },
             ]}
           />
@@ -141,7 +157,11 @@ export default function TableManagement() {
             imageSrc="/images/table-actions.webp"
             imageAlt="Call waiter and move tables"
             features={[
-              { icon: BellRing, title: 'Call Waiter Button', desc: 'Customer presses → instant alert' },
+              {
+                icon: BellRing,
+                title: 'Call Waiter Button',
+                desc: 'Customer presses → instant alert',
+              },
               { icon: ArrowRightLeft, title: 'Move Table', desc: 'Transfer entire bill in 2 taps' },
               { icon: Users, title: 'Merge Bills', desc: 'Combine multiple tables easily' },
               { icon: Zap, title: 'Waiter Notification', desc: 'Push alert to waiter’s phone' },
@@ -165,7 +185,11 @@ export default function TableManagement() {
               { icon: Users, title: 'Waiter Assignment', desc: 'Drag tables to assign' },
               { icon: Smartphone, title: 'Waiter App', desc: 'Only their tables appear' },
               { icon: Zap, title: 'Real-Time Updates', desc: 'New order → waiter notified' },
-              { icon: Shield, title: 'Permission Control', desc: 'Waiter can’t see other sections' },
+              {
+                icon: Shield,
+                title: 'Permission Control',
+                desc: 'Waiter can’t see other sections',
+              },
             ]}
           />
         </div>

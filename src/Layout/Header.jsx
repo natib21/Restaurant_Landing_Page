@@ -1,8 +1,9 @@
 // components/Layout/Header.jsx
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
-  Menu,
   X,
   ChevronDown,
   ChevronRight,
@@ -28,6 +29,7 @@ import {
   Languages,
   Phone,
   Mail,
+  SquareMenu,
 } from 'lucide-react';
 
 const features = [
@@ -84,7 +86,7 @@ const features = [
   {
     to: '/payment-integration',
     label: 'Payment Integration',
-    desc: 'Telebirr, CBE Birr, HelloCash',
+    desc: 'Telebirr, CBE Birr',
     icon: Wallet,
   },
 
@@ -98,46 +100,45 @@ const features = [
 ];
 
 const restaurantTypes = [
-  { to: '/for/cafe', label: 'Cafes & Coffee Shops', icon: Coffee },
-  { to: '/for/hotel', label: 'Hotels & Resorts', icon: Hotel },
-  { to: '/for/fast-food', label: 'Fast Food', icon: Utensils },
-  { to: '/for/virtual-kitchen', label: 'Virtual Kitchen', icon: Cloud },
-  { to: '/for/lounge-bar', label: 'Lounges & Bars', icon: GlassWater },
-  { to: '/for/bakery', label: 'Bakeries', icon: Croissant },
+  { to: '/cafe', label: 'Cafes & Coffee Shops', icon: Coffee },
+  { to: '/hotel', label: 'Hotels & Resorts', icon: Hotel },
+  { to: '/fast-food', label: 'Fast Food', icon: Utensils },
+  { to: '/virtual-kitchen', label: 'Virtual Kitchen', icon: Cloud },
+  { to: '/lounge-bar', label: 'Lounges & Bars', icon: GlassWater },
+  { to: '/bakery', label: 'Bakeries', icon: Croissant },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
-
+  const [restaurantOpen, setRestaurantOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
     setFeaturesOpen(false);
   }, [location]);
   return (
     <>
-      {/* PROMO BANNER WITH GIF */}
       <div className="text-white">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-          <div className="flex items-center gap-4 h-12">
+        <div className="max-w-7xl mx-auto sm:px-4 sm:py-3 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          <div className="flex items-center gap-4 sm:h-12 ">
             <img
               src="/images/restaurantBanner.gif"
               alt="Special Offer"
-              className="object-contain -z-10 h-40"
+              className="object-contain -z-10 sm:h-40 "
             />
           </div>
         </div>
       </div>
 
-      <div className="bg-blue-950 text-white text-sm">
+      <div className="bg-blue-950 text-white text-sm hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-wrap justify-between items-center gap-6 font-semibold">
           <div className="flex items-center gap-6">
             <a
               href="tel:+251923479921"
               className="flex items-center gap-2 hover:underline font-medium transition"
             >
-              <Phone className="h-4 w-4 text-white/80" />
+              <Phone className="h-10 w-10 text-white/80" />
               <span>Need help?: +251 923 479 921</span>
             </a>
 
@@ -192,8 +193,8 @@ export default function Header() {
       </div>
 
       {/* MAIN HEADER */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40 px-10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between" aria-label="Global">
+      <header className="bg-white sticky top-0 z-40 lg:px-10 px-4 lg:py-1 py-4 ">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between " aria-label="Global">
           {/* Logo */}
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
@@ -209,9 +210,9 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 text-gray-700 hover:text-blue-900 transition"
+              className="  hover:text-blue-900 transition border border-blue-500 p-2"
             >
-              <Menu className="h-6 w-6" />
+              <SquareMenu className="h-full text-gray-700 " />
             </button>
           </div>
 
@@ -221,7 +222,7 @@ export default function Header() {
               to="/"
               className={({ isActive }) =>
                 `flex items-center text-sm font-semibold transition h-full ${
-                  isActive ? 'text-blue-900' : 'text-blue-900 hover:text-blue-500'
+                  isActive ? 'text-blue-600 font-extrabold' : 'text-blue-900 hover:text-blue-500'
                 }`
               }
             >
@@ -257,7 +258,7 @@ export default function Header() {
                 onMouseLeave={() => setFeaturesOpen(false)}
               >
                 <div className="w-max min-w-[900px] max-w-6xl bg-white rounded-sm shadow-2xl ring-1 ring-gray-200 overflow-hidden">
-                  <div className="grid grid-cols-4 gap-2 p-4">
+                  <div className="grid grid-cols-4 gap-4 p-10">
                     {features.map(item => {
                       const isViewAll = item.label === 'View All';
                       return (
@@ -282,7 +283,7 @@ export default function Header() {
                               <p className="font-semibold text-blue-900 group-hover/item:text-blue-600">
                                 {item.label}
                               </p>
-                              <p className="text-sm text-blue-600 mt-1 font-merienda">
+                              <p className="text-sm text-blue-600 mt-1 font-merienda text-nowrap">
                                 {item.desc}
                               </p>
                             </div>
@@ -292,7 +293,7 @@ export default function Header() {
                     })}
                   </div>
 
-                  <div className="bg-blue-50 border-t border-blue-200 px-10 py-2">
+                  <div className="bg-blue-50 border-t border-blue-200 px-10 py-4">
                     <div className="flex justify-between items-center">
                       <a
                         href="https://menuroom.et/demo"
@@ -356,7 +357,7 @@ export default function Header() {
               to="/pricing"
               className={({ isActive }) =>
                 `flex items-center h-full text-sm font-semibold transition ${
-                  isActive ? 'text-blue-600' : 'text-blue-900 hover:text-blue-600'
+                  isActive ? 'text-blue-600 font-extrabold' : 'text-blue-900 hover:text-blue-600'
                 }`
               }
             >
@@ -367,7 +368,7 @@ export default function Header() {
               to="/resources"
               className={({ isActive }) =>
                 `flex items-center h-full text-sm font-semibold transition ${
-                  isActive ? 'text-blue-600' : 'text-blue-900 hover:text-blue-600'
+                  isActive ? 'text-blue-600 font-extrabold' : 'text-blue-900 hover:text-blue-600'
                 }`
               }
             >
@@ -391,51 +392,223 @@ export default function Header() {
             </a>
           </div>
         </nav>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-white">
-            <div className="fixed inset-0 bg-black/20" onClick={() => setMobileMenuOpen(false)} />
-            <div className="fixed inset-x-0 top-0 z-50 bg-white shadow-xl">
-              <div className="flex items-center justify-between p-6 border-b">
-                <Link to="/" className="-m-1.5 p-1.5">
-                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+        <AnimatePresence>
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <motion.div
+              className="fixed inset-0 z-50 bg-black/50 "
+              onClick={() => setMobileMenuOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <motion.div
+                className="fixed right-0 top-0 h-full w-full bg-white shadow-2xl"
+                onClick={e => e.stopPropagation()}
+                initial={{ x: '100%' }}
+                animate={{ x: '0%' }}
+                exit={{ x: '100%' }}
+                transition={{ type: 'spring', stiffness: 260, damping: 25 }}
+              >
+                <div className="flex items-center justify-between p-6 border-b">
+                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">M</span>
                   </div>
-                </Link>
-                <button onClick={() => setMobileMenuOpen(false)} className="p-2">
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="px-6 py-8 space-y-6">
-                <NavLink to="/" className="block text-lg font-semibold text-blue-900">
-                  Home
-                </NavLink>
-                <NavLink to="/pricing" className="block text-lg font-semibold text-blue-900">
-                  Pricing
-                </NavLink>
-                <NavLink to="/resources" className="block text-lg font-semibold text-blue-900">
-                  Resources
-                </NavLink>
-
-                <div className="pt-8 border-t space-y-4">
-                  <a
-                    href="https://app.menuroom.et/login"
-                    className="font-merienda block w-full text-center py-3 text-lg font-semibold text-blue-500 border border-blue-300 rounded-xl hover:border-blue-600"
-                  >
-                    Log in
-                  </a>
-                  <a
-                    href="https://app.menuroom.et/signup"
-                    className="block w-full text-center py-3 text-lg font-bold text-white bg-gradient-to-br from-blue-500 to-blue-900 rounded-xl hover:bg-blue-700 shadow-lg"
-                  >
-                    Start Free Trial
-                  </a>
+                  <button onClick={() => setMobileMenuOpen(false)}>
+                    <X className="h-8 w-8 text-gray-600" />
+                  </button>
                 </div>
-              </div>
-            </div>
-          </div>
-        )}
+
+                <div className="p-6 space-y-4 overflow-y-auto h-full pb-32 flex flex-col justify-between ">
+                  <div>
+                    <NavLink
+                      to="/"
+                      className="font-merienda block text-2xl font-bold text-blue-950 py-3 border-b"
+                    >
+                      Home
+                    </NavLink>
+
+                    {/* Features Dropdown */}
+                    <div>
+                      <button
+                        onClick={() => setFeaturesOpen(!featuresOpen)}
+                        className="font-merienda w-full flex items-center justify-between text-2xl font-bold text-blue-950 py-3 border-b"
+                      >
+                        Features
+                        <ChevronDown
+                          className={`h-6 w-6 transition ${featuresOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                      {featuresOpen && (
+                        <AnimatePresence>
+                          <motion.div
+                            className="mt-4 space-y-3 pl-4 border-l-4 border-blue-200"
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={{
+                              hidden: { opacity: 0 },
+                              visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.08 },
+                              },
+                            }}
+                          >
+                            {features.map(item => (
+                              <motion.div
+                                key={item.to}
+                                variants={{
+                                  hidden: { opacity: 0, x: 40 },
+                                  visible: { opacity: 1, x: 0 },
+                                }}
+                                exit={{ opacity: 0, x: 40 }}
+                                transition={{ duration: 0.25 }}
+                              >
+                                <NavLink
+                                  to={item.to}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="flex items-center gap-4 py-3 px-4 rounded-xl hover:bg-blue-50 transition"
+                                >
+                                  <item.icon className="h-8 w-8 text-blue-600" />
+                                  <div>
+                                    <p className="font-semibold text-blue-900">{item.label}</p>
+                                    <p className="text-sm text-gray-600">{item.desc}</p>
+                                  </div>
+                                </NavLink>
+                              </motion.div>
+                            ))}
+                          </motion.div>
+                        </AnimatePresence>
+                      )}
+                    </div>
+
+                    {/* Restaurant Type Dropdown */}
+                    {/* Restaurant Type Dropdown */}
+                    <div>
+                      <button
+                        onClick={() => setRestaurantOpen(!restaurantOpen)}
+                        className="w-full font-merienda flex items-center justify-between text-2xl font-bold text-blue-950 py-3 border-b"
+                      >
+                        Restaurant Type
+                        <ChevronDown
+                          className={`h-6 w-6 transition ${restaurantOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+
+                      {restaurantOpen && (
+                        <AnimatePresence>
+                          <motion.div
+                            className="mt-4 space-y-3 pl-4 border-l-4 border-blue-200"
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={{
+                              hidden: { opacity: 0 },
+                              visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.08 },
+                              },
+                            }}
+                          >
+                            {restaurantTypes.map(item => (
+                              <motion.div
+                                key={item.to}
+                                variants={{
+                                  hidden: { opacity: 0, x: 40 },
+                                  visible: { opacity: 1, x: 0 },
+                                }}
+                                exit={{ opacity: 0, x: 40 }}
+                                transition={{ duration: 0.25 }}
+                              >
+                                <NavLink
+                                  to={item.to}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="flex items-center gap-4 py-4 px-4 rounded-xl hover:bg-blue-50 transition"
+                                >
+                                  <item.icon className="h-9 w-9 text-blue-600" />
+                                  <span className="font-medium text-blue-900">{item.label}</span>
+                                </NavLink>
+                              </motion.div>
+                            ))}
+                          </motion.div>
+                        </AnimatePresence>
+                      )}
+                    </div>
+
+                    <NavLink
+                      to="/pricing"
+                      className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
+                    >
+                      Pricing
+                    </NavLink>
+                    <NavLink
+                      to="/resources"
+                      className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
+                    >
+                      Resources
+                    </NavLink>
+                    <NavLink
+                      to="/about"
+                      className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
+                    >
+                      About Us
+                    </NavLink>
+                    <a
+                      href="https://app.menuroom.et/login"
+                      className="block text-1xl font-bold text-blue-600 py-3 border-b"
+                    >
+                      Log in
+                    </a>
+                    <a
+                      href="https://app.menuroom.et/login"
+                      className="block text-1xl font-bold text-blue-600 py-3 border-b"
+                    >
+                      Sign Up
+                    </a>
+                  </div>
+                  <div>
+                    <div className="border-t border-gray-200 ">
+                      <div className="space-y-5  ">
+                        <a
+                          href="tel:+251923479921"
+                          className="flex items-center justify-start gap-3 text-xl font-bold text-blue-400 hover:text-blue-950 transition"
+                        >
+                          <Phone className="h-7 w-7" />
+                          +251 923 479 921
+                        </a>
+                        <a
+                          href="mailto:support@menuroom.et"
+                          className="flex items-center justify-start gap-3 text-lg font-medium text-blue-400 hover:text-blue-950 transition"
+                        >
+                          <Mail className="h-6 w-6" />
+                          support@menuroom.et
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    {/* Mobile CTA Buttons */}
+                    <div className=" flex gap-7">
+                      <a
+                        href="https://app.menuroom.et/login"
+                        className=" w-full  flex justify-center items-center text-2xl font-bold border-2 border-blue-950 text-blue-950 rounded-xl hover:bg-blue-50"
+                      >
+                        Log in
+                      </a>
+                      <a
+                        href="https://app.menuroom.et/signup"
+                        className=" w-full text-center py-4 text-2xl font-bold text-white bg-blue-950 rounded-xl shadow-lg"
+                      >
+                        Sign up
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </>
   );

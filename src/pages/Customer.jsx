@@ -20,13 +20,17 @@ import {
   UserCheck,
   Bell,
   ThumbsUp,
-  Globe
+  Globe,
 } from 'lucide-react';
 
 // Why Choose Customer Management
 const customerWhyChooseUs = [
   { title: 'Know Your Regulars', icon: UserCheck, desc: 'See who visits most & spends most' },
-  { title: 'Chat Directly', icon: MessageCircle, desc: 'WhatsApp or in-app chat with any customer' },
+  {
+    title: 'Chat Directly',
+    icon: MessageCircle,
+    desc: 'WhatsApp or in-app chat with any customer',
+  },
   { title: 'Loyalty Points', icon: Gift, desc: 'Reward repeat customers automatically' },
   { title: 'Smart Reports', icon: BarChart3, desc: 'Top customers, best days, peak hours' },
   { title: 'Feedback & Reviews', icon: ThumbsUp, desc: 'Collect ratings and comments easily' },
@@ -212,7 +216,8 @@ export default function CustomerManagement() {
               Your Best Customers Deserve Better
             </h2>
             <p className="mt-6 text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Join 50+ smart restaurants using Menuroom to know, reward, and grow their loyal customers.
+              Join 50+ smart restaurants using Menuroom to know, reward, and grow their loyal
+              customers.
               <br className="hidden sm:block" />
               More visits. Higher spending. Happier regulars.
             </p>

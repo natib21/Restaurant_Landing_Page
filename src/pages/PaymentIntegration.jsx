@@ -7,8 +7,19 @@ import { Link } from 'react-router-dom';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
 import ReusableFlow from '../component/common/ReusableFlow';
 import {
-  CreditCard, Smartphone, Wallet, QrCode, CheckCircle,
-  Zap, Shield, Globe, ArrowDownUp, Users, Store, Clock, PlusCircle
+  CreditCard,
+  Smartphone,
+  Wallet,
+  QrCode,
+  CheckCircle,
+  Zap,
+  Shield,
+  Globe,
+  ArrowDownUp,
+  Users,
+  Store,
+  Clock,
+  PlusCircle,
 } from 'lucide-react';
 
 const paymentWhyChooseUs = [
@@ -29,7 +40,6 @@ const PaymentIntegration = () => {
       <section className="bg-white py-16 sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
-            
             badge="Works With EVERY Ethiopian Payment Method"
             heading={
               <>
@@ -67,7 +77,8 @@ const PaymentIntegration = () => {
               </>
             }
           >
-            A new bank launches a wallet tomorrow? We add it in days. Your restaurant stays ahead — always.
+            A new bank launches a wallet tomorrow? We add it in days. Your restaurant stays ahead —
+            always.
           </SectionHeader>
         </div>
       </section>
@@ -75,7 +86,6 @@ const PaymentIntegration = () => {
       {/* Core Features */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-6 grid gap-20">
-
           {/* All Current Gateways */}
           <FeatureHighlight
             badge="Every Gateway in Ethiopia Today"
@@ -90,7 +100,11 @@ const PaymentIntegration = () => {
             imageSrc="/images/all-payment-gateways.webp"
             imageAlt="Telebirr, CBE Birr, HelloCash, Amole, Ebirr logos"
             features={[
-              { icon: Smartphone, title: 'Telebirr • CBE Birr • HelloCash', desc: 'Deep native integration' },
+              {
+                icon: Smartphone,
+                title: 'Telebirr • CBE Birr • HelloCash',
+                desc: 'Deep native integration',
+              },
               { icon: CreditCard, title: 'Amole • Ebirr • M-Birr', desc: 'Fully supported' },
               { icon: Zap, title: '3-Second Payments', desc: 'Faster than cash' },
               { icon: CheckCircle, title: 'Auto Verified', desc: 'No fake payments' },
@@ -116,7 +130,11 @@ const PaymentIntegration = () => {
               { icon: PlusCircle, title: 'We Add New Ones Fast', desc: 'Usually within 1 week' },
               { icon: Shield, title: 'Free Forever', desc: 'No hidden fees for new gateways' },
               { icon: Globe, title: 'You Stay Ahead', desc: 'Competitors still catching up' },
-              { icon: Users, title: 'Your Customers Happy', desc: 'They always have their favorite option' },
+              {
+                icon: Users,
+                title: 'Your Customers Happy',
+                desc: 'They always have their favorite option',
+              },
             ]}
           />
 
@@ -225,7 +243,10 @@ const PaymentIntegration = () => {
             >
               Start Free Trial
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition"
+            >
               Book Full Payment Demo
             </Link>
           </div>

@@ -7,15 +7,48 @@ import { Link } from 'react-router-dom';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
 import ReusableFlow from '../component/common/ReusableFlow';
 import {
-  Package, Store, Layers, Zap, Globe, QrCode, Smartphone,
-  Clock, Calendar, Sunrise, Tag, EyeOff, Shuffle,
-  Plus, Percent, Languages , Palette , Camera,Shield ,Heart 
+  Package,
+  Store,
+  Layers,
+  Zap,
+  Globe,
+  QrCode,
+  Smartphone,
+  Clock,
+  Calendar,
+  Sunrise,
+  Tag,
+  EyeOff,
+  Shuffle,
+  Plus,
+  Percent,
+  Languages,
+  Palette,
+  Camera,
+  Shield,
+  Heart,
 } from 'lucide-react';
 const digitalMenuWhyChooseUs = [
-  { title: 'Stunning Mobile Design', icon: Smartphone, desc: 'Looks beautiful on every phone — no cheap PDF' },
-  { title: 'Add Food Photos', icon: Camera, desc: 'Show your delicious dishes — customers order more' },
-  { title: 'Your Branding', icon: Palette, desc: 'Logo, colors, fonts — feels like your restaurant' },
-  { title: 'Amharic + English', icon: Languages, desc: 'Full bilingual — customers switch instantly' },
+  {
+    title: 'Stunning Mobile Design',
+    icon: Smartphone,
+    desc: 'Looks beautiful on every phone — no cheap PDF',
+  },
+  {
+    title: 'Add Food Photos',
+    icon: Camera,
+    desc: 'Show your delicious dishes — customers order more',
+  },
+  {
+    title: 'Your Branding',
+    icon: Palette,
+    desc: 'Logo, colors, fonts — feels like your restaurant',
+  },
+  {
+    title: 'Amharic + English',
+    icon: Languages,
+    desc: 'Full bilingual — customers switch instantly',
+  },
   { title: 'Update in 1 Second', icon: Zap, desc: 'Change price, hide item — live immediately' },
   { title: 'Works Offline', icon: Shield, desc: 'Menu loads fast even without internet' },
   { title: 'Customer Favorites', icon: Heart, desc: 'Highlight most popular items first' },
@@ -28,13 +61,14 @@ const MultiMenu = () => {
       <section className="bg-white py-16 sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
-          
             badge="The Only Menu System You’ll Ever Need"
             heading={
               <>
                 One Master Menu
                 <br />
-                <span className="text-blue-900 font-merienda">Endless Possibilities Per Branch</span>
+                <span className="text-blue-900 font-merienda">
+                  Endless Possibilities Per Branch
+                </span>
               </>
             }
             description="Create once. Customize per branch. Add smart categories, time-based visibility, and unlimited combos — all without printing a single paper menu again."
@@ -51,7 +85,7 @@ const MultiMenu = () => {
         </div>
       </section>
 
-      <WhyChooseUsSection features={digitalMenuWhyChooseUs}/>
+      <WhyChooseUsSection features={digitalMenuWhyChooseUs} />
 
       {/* Intro */}
       <section className="bg-white py-16">
@@ -66,7 +100,8 @@ const MultiMenu = () => {
               </>
             }
           >
-            One central menu. Smart categories. Time-based visibility. Branch-specific pricing & combos. Real-time sync. Zero printing.
+            One central menu. Smart categories. Time-based visibility. Branch-specific pricing &
+            combos. Real-time sync. Zero printing.
           </SectionHeader>
         </div>
       </section>
@@ -74,7 +109,6 @@ const MultiMenu = () => {
       {/* Core Features – Now Includes Categories + Combos */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-6 grid gap-20">
-
           {/* Master Menu Library */}
           <FeatureHighlight
             badge="One Source of Truth"
@@ -113,9 +147,17 @@ const MultiMenu = () => {
             imageAlt="Smart time and branch-based categories"
             features={[
               { icon: Sunrise, title: 'Breakfast Auto-Hide', desc: 'Gone after 11 AM' },
-              { icon: Calendar, title: 'Ramadan & Fasting Mode', desc: 'Auto-activate during seasons' },
+              {
+                icon: Calendar,
+                title: 'Ramadan & Fasting Mode',
+                desc: 'Auto-activate during seasons',
+              },
               { icon: EyeOff, title: 'Hide Per Branch', desc: 'No alcohol in certain locations' },
-              { icon: Shuffle, title: 'Drag & Drop Order', desc: 'Put “Fasting” first when needed' },
+              {
+                icon: Shuffle,
+                title: 'Drag & Drop Order',
+                desc: 'Put “Fasting” first when needed',
+              },
             ]}
           />
 
@@ -159,7 +201,11 @@ const MultiMenu = () => {
               { icon: Plus, title: 'Any Combo Type', desc: 'Main + Drink + Side = Discount' },
               { icon: Percent, title: 'Auto Discounts', desc: 'Fixed price or % off' },
               { icon: Clock, title: 'Time-Limited Deals', desc: 'Lunch combo 11AM–3PM only' },
-              { icon: Store, title: 'Branch-Exclusive', desc: 'Student deal only near universities' },
+              {
+                icon: Store,
+                title: 'Branch-Exclusive',
+                desc: 'Student deal only near universities',
+              },
             ]}
           />
 
@@ -180,7 +226,11 @@ const MultiMenu = () => {
             ctaLink="/contact"
             features={[
               { icon: Zap, title: 'Real-Time Sync', desc: 'No delays, no confusion' },
-              { icon: Smartphone, title: 'Customer Sees Latest', desc: 'On their phone immediately' },
+              {
+                icon: Smartphone,
+                title: 'Customer Sees Latest',
+                desc: 'On their phone immediately',
+              },
               { icon: QrCode, title: 'QR Always Current', desc: 'Never reprint again' },
               { icon: Globe, title: 'Selective Push', desc: 'Update only certain branches' },
             ]}
@@ -246,7 +296,10 @@ const MultiMenu = () => {
               Start Free Trial
               <span className="transform transition-transform group-hover:translate-x-2">→</span>
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition"
+            >
               Book Full Menu Demo
               <span>→</span>
             </Link>

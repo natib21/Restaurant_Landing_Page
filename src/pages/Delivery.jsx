@@ -25,11 +25,23 @@ import {
 
 // Dedicated Why Choose for Delivery
 const deliveryWhyChooseUs = [
-  { title: 'Own Riders or 3rd Party', icon: Truck, desc: 'Use your riders OR connect DeliverAddis, ZayRide, etc.' },
+  {
+    title: 'Own Riders or 3rd Party',
+    icon: Truck,
+    desc: 'Use your riders OR connect DeliverAddis, ZayRide, etc.',
+  },
   { title: 'Live Order Tracking', icon: MapPin, desc: 'Customer sees rider location in real-time' },
   { title: 'Auto Dispatch', icon: Zap, desc: 'New order → nearest rider gets it instantly' },
-  { title: 'Cash + Mobile Payment', icon: Wallet, desc: 'Pay on delivery or online — both supported' },
-  { title: 'Delivery Zones & Fees', icon: Globe, desc: 'Set different fees for Bole, Piassa, Sarbet, etc.' },
+  {
+    title: 'Cash + Mobile Payment',
+    icon: Wallet,
+    desc: 'Pay on delivery or online — both supported',
+  },
+  {
+    title: 'Delivery Zones & Fees',
+    icon: Globe,
+    desc: 'Set different fees for Bole, Piassa, Sarbet, etc.',
+  },
   { title: 'Customer Calls Rider', icon: PhoneCall, desc: 'One-tap call from tracking page' },
   { title: 'Rider App (Android)', icon: Smartphone, desc: 'Free rider app — no training needed' },
   { title: 'Proof of Delivery', icon: CheckCircle, desc: 'Photo + signature + OTP options' },
@@ -80,7 +92,8 @@ const DeliveryManagement = () => {
               </>
             }
           >
-            Online orders → auto dispatch → live tracking → proof of delivery → money in your pocket. No chaos. No missed orders. No angry customers.
+            Online orders → auto dispatch → live tracking → proof of delivery → money in your
+            pocket. No chaos. No missed orders. No angry customers.
           </SectionHeader>
         </div>
       </section>
@@ -88,7 +101,6 @@ const DeliveryManagement = () => {
       {/* Core Features */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-6 grid gap-20">
-
           {/* Own Riders + 3rd Party */}
           <FeatureHighlight
             badge="Your Riders or 3rd Party — You Choose"
@@ -148,9 +160,17 @@ const DeliveryManagement = () => {
             imageAlt="Rider receiving order on phone"
             features={[
               { icon: Zap, title: 'Auto Assign', desc: 'Nearest rider gets order' },
-              { icon: Smartphone, title: 'Free Rider App', desc: 'Android app — no training needed' },
+              {
+                icon: Smartphone,
+                title: 'Free Rider App',
+                desc: 'Android app — no training needed',
+              },
               { icon: Users, title: 'Manual Assign Option', desc: 'You can override anytime' },
-              { icon: Package, title: 'Order Details + Navigation', desc: 'Full info + Google Maps link' },
+              {
+                icon: Package,
+                title: 'Order Details + Navigation',
+                desc: 'Full info + Google Maps link',
+              },
             ]}
           />
 
@@ -172,10 +192,18 @@ const DeliveryManagement = () => {
             ctaText="See Full Delivery Flow"
             ctaLink="/contact"
             features={[
-              { icon: CheckCircle, title: 'Photo + Signature + OTP', desc: 'Multiple proof options' },
+              {
+                icon: CheckCircle,
+                title: 'Photo + Signature + OTP',
+                desc: 'Multiple proof options',
+              },
               { icon: Wallet, title: 'Cash on Delivery', desc: 'Rider collects & deposits' },
               { icon: Smartphone, title: 'Pre-Payment', desc: 'Pay with Telebirr before dispatch' },
-              { icon: Store, title: 'Daily Cash Report', desc: 'Know exactly what riders collected' },
+              {
+                icon: Store,
+                title: 'Daily Cash Report',
+                desc: 'Know exactly what riders collected',
+              },
             ]}
           />
         </div>
@@ -238,7 +266,10 @@ const DeliveryManagement = () => {
             >
               Start Free Trial
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-white text-lg font-semibold hover:text-blue-200 transition"
+            >
               Book Delivery Demo
             </Link>
           </div>

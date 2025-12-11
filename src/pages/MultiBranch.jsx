@@ -27,7 +27,6 @@ const MultiBranch = () => {
       <section className="bg-white py-16 sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
-          
             badge="Multi-Branch & Franchise Ready"
             heading={
               <>
@@ -66,7 +65,8 @@ const MultiBranch = () => {
               </>
             }
           >
-            From family-owned cafes in Bole & Piassa to hotel F&B chains and full franchise networks across Ethiopia — Mesob grows with you.
+            From family-owned cafes in Bole & Piassa to hotel F&B chains and full franchise networks
+            across Ethiopia — Mesob grows with you.
           </SectionHeader>
         </div>
       </section>
@@ -74,7 +74,6 @@ const MultiBranch = () => {
       {/* Core Features */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-6 grid gap-20">
-
           <FeatureHighlight
             badge="Centralized Control"
             title={
@@ -88,9 +87,17 @@ const MultiBranch = () => {
             imageSrc="/images/multi-branch-central-control.webp"
             imageAlt="Master menu control across branches"
             features={[
-              { icon: Globe, title: 'Global Menu Library', desc: 'Add items once — available everywhere.' },
+              {
+                icon: Globe,
+                title: 'Global Menu Library',
+                desc: 'Add items once — available everywhere.',
+              },
               { icon: Store, title: 'Selective Push', desc: 'Choose which branches get updates.' },
-              { icon: Layers, title: 'Branch Customization', desc: 'Local pricing, combos, and availability.' },
+              {
+                icon: Layers,
+                title: 'Branch Customization',
+                desc: 'Local pricing, combos, and availability.',
+              },
               { icon: Zap, title: 'Instant Sync', desc: 'Changes live in seconds, not days.' },
             ]}
           />
@@ -110,10 +117,26 @@ const MultiBranch = () => {
             imageSrc="/images/multi-branch-local-control.webp"
             imageAlt="Branch manager customizing local menu"
             features={[
-              { icon: Package, title: 'Location-Based Pricing', desc: 'Adjust prices based on rent, demand, or competition.' },
-              { icon: Shield, title: 'Role-Based Permissions', desc: 'Owner sees all. Managers see only their branch.' },
-              { icon: Users, title: 'Per-Branch Staff', desc: 'Add waiters, cashiers, chefs per location.' },
-              { icon: QrCode, title: 'Unique QR Menus', desc: 'Each branch has its own digital menu link.' },
+              {
+                icon: Package,
+                title: 'Location-Based Pricing',
+                desc: 'Adjust prices based on rent, demand, or competition.',
+              },
+              {
+                icon: Shield,
+                title: 'Role-Based Permissions',
+                desc: 'Owner sees all. Managers see only their branch.',
+              },
+              {
+                icon: Users,
+                title: 'Per-Branch Staff',
+                desc: 'Add waiters, cashiers, chefs per location.',
+              },
+              {
+                icon: QrCode,
+                title: 'Unique QR Menus',
+                desc: 'Each branch has its own digital menu link.',
+              },
             ]}
           />
 
@@ -130,10 +153,26 @@ const MultiBranch = () => {
             imageSrc="/images/multi-branch-analytics-dashboard.webp"
             imageAlt="Live multi-branch sales dashboard"
             features={[
-              { icon: Store, title: 'Branch Comparison', desc: 'See which location sells more kitfo or coffee.' },
-              { icon: ArrowRightLeft, title: 'Consolidated Reports', desc: 'Total revenue + individual branch breakdowns.' },
-              { icon: Smartphone, title: 'Mobile Access', desc: 'Check sales while visiting any branch.' },
-              { icon: BellRing, title: 'Smart Alerts', desc: 'Low stock, slow service, or unusual drops — notified instantly.' },
+              {
+                icon: Store,
+                title: 'Branch Comparison',
+                desc: 'See which location sells more kitfo or coffee.',
+              },
+              {
+                icon: ArrowRightLeft,
+                title: 'Consolidated Reports',
+                desc: 'Total revenue + individual branch breakdowns.',
+              },
+              {
+                icon: Smartphone,
+                title: 'Mobile Access',
+                desc: 'Check sales while visiting any branch.',
+              },
+              {
+                icon: BellRing,
+                title: 'Smart Alerts',
+                desc: 'Low stock, slow service, or unusual drops — notified instantly.',
+              },
             ]}
           />
 
@@ -154,10 +193,26 @@ const MultiBranch = () => {
             ctaText="Talk to Enterprise Team"
             ctaLink="/contact"
             features={[
-              { icon: Shield, title: 'Locked Core Items', desc: 'Franchisees can’t change your signature dishes.' },
-              { icon: Package, title: 'Franchisee Portal', desc: 'Limited access for partners, full control for you.' },
-              { icon: Globe, title: 'Nationwide Support', desc: 'Add branches in Hawassa, Bahir Dar, Mekelle...' },
-              { icon: Zap, title: 'Zero-Downtime Launch', desc: 'New branch live in under 10 minutes.' },
+              {
+                icon: Shield,
+                title: 'Locked Core Items',
+                desc: 'Franchisees can’t change your signature dishes.',
+              },
+              {
+                icon: Package,
+                title: 'Franchisee Portal',
+                desc: 'Limited access for partners, full control for you.',
+              },
+              {
+                icon: Globe,
+                title: 'Nationwide Support',
+                desc: 'Add branches in Hawassa, Bahir Dar, Mekelle...',
+              },
+              {
+                icon: Zap,
+                title: 'Zero-Downtime Launch',
+                desc: 'New branch live in under 10 minutes.',
+              },
             ]}
           />
         </div>
