@@ -4,7 +4,7 @@ import { HeroHeading } from './HeroHeading';
 import { HeroDescription } from './HeroDescription';
 import { HeroCTAs } from './HeroCTAs';
 import { HeroStats } from './HeroStats';
-import bgImageAbs from '/images/abstract.webp'
+import bgImageAbs from '/images/abstract.webp';
 export const HeroSection = ({
   badge = 'Built for Smart Restaurants',
   heading = (
@@ -18,19 +18,18 @@ export const HeroSection = ({
   ctaSecondaryText,
   ctaSecondaryLink,
   stats,
-  bgImg = bgImageAbs
+  bgImg = bgImageAbs,
+  bgImgB,
 }) => {
   return (
     <div
-      className={`relative  overflow-hidden rounded-xl `} // Added a subtle rounded-xl for style
+      className={`relative  overflow-hidden rounded-xl `}
       style={{
-        
-        backgroundImage: bgImg ? `url(${bgImg})` : 'none',
+        backgroundImage: bgImgB && bgImg ? `url(${bgImg})` : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-     
       <div className={`relative z-10 mx-auto max-w-3xl text-center py-14`}>
         <HeroBadge>{badge}</HeroBadge>
         <HeroHeading>{heading}</HeroHeading>

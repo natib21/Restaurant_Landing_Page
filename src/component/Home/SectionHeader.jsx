@@ -13,7 +13,7 @@ const ArrowLine = () => (
 );
 
 const SectionHeader = ({ badge, title, children }) => (
-  <header className="mx-auto  text-center lg:my-5">
+  <header className="mx-auto  text-center lg:mt-10">
     <div className=" inline-flex items-center rounded-full bg-blue-50 px-2 py-1 text-sm font-bold text-blue-900">
       <ArrowLine />
       <span className="uppercase font-merienda text-xs sm:text-xs">{badge}</span>

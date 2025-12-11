@@ -17,8 +17,6 @@ import {
   Users,
   ArrowRightLeft,
   BellRing,
-  UserPlus,
-  ListPlus,
 } from 'lucide-react';
 import ReusableFlow from '../component/common/ReusableFlow';
 
@@ -27,7 +25,7 @@ const Home = () => {
     <>
       <section className="bg-white py-16 sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl ">
-          <HeroSection />
+          <HeroSection bgImgB />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 // components/Layout/Header.jsx
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
   Menu,
   X,
@@ -31,58 +31,58 @@ import {
 } from 'lucide-react';
 
 const features = [
-  { to: '/features/pos', label: 'POS System', desc: 'Fast & reliable checkout', icon: CreditCard },
-  { to: '/features/qr-code', label: 'QR Code Menu', desc: 'Print once, use forever', icon: QrCode },
+  { to: '/pos', label: 'POS System', desc: 'Fast & reliable checkout', icon: CreditCard },
+  { to: 'qr-menu', label: 'QR Code Menu', desc: 'Print once, use forever', icon: QrCode },
   {
-    to: '/features/order-management',
+    to: '/order',
     label: 'Order Management',
     desc: 'Track & manage all orders',
     icon: ShoppingCart,
   },
   {
-    to: '/features/table-management',
+    to: '/table',
     label: 'Table Management',
     desc: 'Real-time table status',
     icon: TableIcon,
   },
   {
-    to: '/features/menu-management',
+    to: '/menu',
     label: 'Digital Menu',
     desc: 'Beautiful mobile menus',
     icon: Smartphone,
   },
   {
-    to: '/features/website-builder',
+    to: '/website-builder',
     label: 'Restaurant Website',
     desc: 'Professional online presence',
     icon: Globe,
   },
   {
-    to: '/features/customer-management',
+    to: '/customer',
     label: 'Customer Management',
     desc: 'Loyalty & feedback',
     icon: Users,
   },
   {
-    to: '/features/multi-branch',
+    to: '/multi-branch',
     label: 'Multi-Branch',
     desc: 'Control all locations',
     icon: Store,
   },
   {
-    to: '/features/multi-menu',
+    to: '/multi-menu',
     label: 'Multi-Menu',
     desc: 'Different menus per branch',
     icon: BookOpen,
   },
   {
-    to: '/features/inventory',
+    to: '/inventory',
     label: 'Inventory',
     desc: 'Track stock & reduce waste',
     icon: Package,
   },
   {
-    to: '/features/payment-integration',
+    to: '/payment-integration',
     label: 'Payment Integration',
     desc: 'Telebirr, CBE Birr, HelloCash',
     icon: Wallet,
@@ -109,7 +109,12 @@ const restaurantTypes = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [featuresOpen, setFeaturesOpen] = useState(false);
 
+  const location = useLocation();
+  useEffect(() => {
+    setFeaturesOpen(false);
+  }, [location]);
   return (
     <>
       {/* PROMO BANNER WITH GIF */}
@@ -223,23 +228,33 @@ export default function Header() {
               Home
             </NavLink>
 
-            {/* Features Dropdown */}
-            <div className="group h-full">
-              <button className="h-full flex items-center gap-x-1 text-sm font-semibold text-blue-900 hover:text-blue-600 transition">
+            <div className=" h-full" onMouseLeave={() => setFeaturesOpen(false)}>
+              <button
+                onMouseEnter={() => setFeaturesOpen(true)}
+                onClick={() => setFeaturesOpen(!featuresOpen)}
+                className="h-full flex items-center gap-x-1 text-sm font-semibold text-blue-900 hover:text-blue-600 transition relative z-10"
+              >
                 Features
-                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-300 ${featuresOpen ? 'rotate-180' : ''}`}
+                />
               </button>
+
+              {/* Invisible hover bridge */}
               <div
                 className="absolute inset-x-0 top-full h-8 pointer-events-none"
                 aria-hidden="true"
               />
 
+              {/* Dropdown Panel */}
               <div
-                className="absolute inset-x-0 top-14 left-1/2 -translate-x-1/2 w-max max-w-6xl 
-                opacity-0 invisible scale-95 
-                group-hover:opacity-100 group-hover:visible group-hover:scale-100 
-                transition-all duration-300 ease-out 
-                pointer-events-none group-hover:pointer-events-auto z-50"
+                className={`absolute inset-x-0 top-14 left-1/2 -translate-x-1/2 w-max max-w-6xl z-50 transition-all duration-300 ease-out origin-top ${
+                  featuresOpen
+                    ? 'opacity-100 visible scale-100'
+                    : 'opacity-0 invisible scale-95 pointer-events-none'
+                }`}
+                onMouseEnter={() => setFeaturesOpen(true)}
+                onMouseLeave={() => setFeaturesOpen(false)}
               >
                 <div className="w-max min-w-[900px] max-w-6xl bg-white rounded-sm shadow-2xl ring-1 ring-gray-200 overflow-hidden">
                   <div className="grid grid-cols-4 gap-2 p-4">
@@ -249,6 +264,7 @@ export default function Header() {
                         <NavLink
                           key={item.to}
                           to={item.to}
+                          onClick={() => setFeaturesOpen(false)}
                           className={`
                             block rounded-sm p-2 transition-all duration-300 group/item
                             ${
@@ -280,15 +296,17 @@ export default function Header() {
                     <div className="flex justify-between items-center">
                       <a
                         href="https://menuroom.et/demo"
+                        onClick={() => setFeaturesOpen(false)}
                         className="text-sm font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-2"
                       >
-                        Watch Demo →
+                        Watch Demo
                       </a>
                       <a
                         href="https://menuroom.et/contact"
+                        onClick={() => setFeaturesOpen(false)}
                         className="text-sm font-semibold text-blue-900 hover:text-blue-700 flex items-center gap-2"
                       >
-                        Contact Sales →
+                        Contact Sales
                       </a>
                     </div>
                   </div>

@@ -1,8 +1,22 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Layout from './component/Layout/Layout';
+import Layout from './Layout/Layout';
 // import ScrollToTop from "./component/ScrollTop";
 
 import Home from './pages/Home';
+import Features from './pages/Features';
+import Pricing from './pages/Pricing';
+import POS from './pages/POS';
+import QRMenu from './pages/QrCodeMenu';
+import OrderManagement from './pages/Order';
+import TableManagement from './pages/Table';
+import Menu from './pages/Menu'
+import WebBuilder from './pages/WebsiteBuilder'
+import Customer from './pages/Customer'
+import MultiBranch from './pages/MultiBranch';
+import MultiMenu from './pages/MultiMenu';
+import Inventory from './pages/Inventory';
+import PaymentIntegration from './pages/PaymentIntegration';
+import DeliveryManagement from './pages/Delivery';
 // import Pricing from "./pages/Pricing";
 // import Resources from "./pages/Resources";
 // import NotFound from "./pages/NotFound";
@@ -35,9 +49,22 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-
+          <Route path="features" element={<Features />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="pos" element={<POS />} />
+          <Route path="qr-menu" element={<QRMenu />} />
+          <Route path='order' element={<OrderManagement />}/>
+          <Route path='table' element={<TableManagement />} />
+          <Route path='menu' element={<Menu />} />
+          <Route path="website-builder" element={<WebBuilder />} />
+          <Route path='customer' element={<Customer />} />
+          <Route path='multi-branch' element={<MultiBranch />} />
+          <Route path='multi-menu' element={<MultiMenu />} />
+          <Route path='inventory' element={<Inventory />} />
+          <Route path='payment-integration' element={<PaymentIntegration />} />
+          <Route path='delivery-managment' element={<DeliveryManagement />} />
           {/* FEATURES — All in features/ folder */}
-          {/* <Route path="/features" element={<FeaturesLayout />}>
+          {/* 
             <Route index element={<POS />} />
             <Route path="pos" element={<POS />} />
             <Route path="order-management" element={<OrderManagement />} />
@@ -52,7 +79,7 @@ function App() {
             <Route path="multi-menu" element={<MultiMenu />} />
             <Route path="payment-integration" element={<PaymentIntegration />} />
             <Route path="inventory" element={<Inventory />} />
-          </Route> */}
+           */}
 
           {/* RESTAURANT TYPES */}
           {/* <Route path="/for" element={<RestaurantTypesLayout />}>
