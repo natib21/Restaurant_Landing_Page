@@ -130,7 +130,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="bg-blue-950 text-white text-sm">
+      <div className="bg-blue-950 text-white text-sm hidden sm:block">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-wrap justify-between items-center gap-6 font-semibold">
           <div className="flex items-center gap-6">
             <a
