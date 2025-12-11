@@ -23,21 +23,53 @@ import {
 
 // Why Choose Menuroom Website Builder
 const websiteWhyChooseUs = [
-  { title: 'Stunning Templates', icon: Palette, desc: 'Beautiful restaurant-specific designs' },
-  { title: 'Mobile Perfect', icon: Smartphone, desc: 'Looks amazing on phones & tablets' },
-  { title: 'Your Domain', icon: Globe, desc: 'www.yourrestaurant.com — fully yours' },
-  { title: 'Google Loves It', icon: Search, desc: 'SEO optimized — rank higher locally' },
-  { title: 'Update Instantly', icon: Zap, desc: 'Change menu, hours, photos in seconds' },
-  { title: 'Amharic + English', icon: Languages, desc: 'Full bilingual support built-in' },
-  { title: 'No Coding Needed', icon: Shield, desc: 'Drag & drop — easy for anyone' },
-  { title: 'Live in 1 Hour', icon: Clock, desc: 'From zero to professional site fast' },
+  {
+    title: 'Stunning Templates',
+    icon: Palette,
+    desc: 'Beautiful restaurant-specific designs that attract and engage customers.',
+  },
+  {
+    title: 'Mobile Perfect',
+    icon: Smartphone,
+    desc: 'Looks amazing on any phone or tablet — fully responsive design.',
+  },
+  {
+    title: 'Your Domain',
+    icon: Globe,
+    desc: 'www.yourrestaurant.com — completely yours and easy to remember.',
+  },
+  {
+    title: 'Google Loves It',
+    icon: Search,
+    desc: 'SEO optimized so your restaurant ranks higher in local search results.',
+  },
+  {
+    title: 'Update Instantly',
+    icon: Zap,
+    desc: 'Change your menu, hours, or photos — updates appear immediately.',
+  },
+  {
+    title: 'Amharic + English',
+    icon: Languages,
+    desc: 'Full bilingual support — customers can switch languages instantly.',
+  },
+  {
+    title: 'No Coding Needed',
+    icon: Shield,
+    desc: 'Drag & drop editor makes it easy for anyone to build a website.',
+  },
+  {
+    title: 'Live in 1 Hour',
+    icon: Clock,
+    desc: 'Launch a professional restaurant site from zero in under an hour.',
+  },
 ];
 
 export default function WebsiteBuilder() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Website Builder"
@@ -67,8 +99,8 @@ export default function WebsiteBuilder() {
       <WhyChooseUsSection features={websiteWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="sm:py-4 bg-white">
+        <div className="mx-auto max-w-7xl  px-5 sm:px-0">
           <SectionHeader
             badge="The Smartest Website for Restaurants in Ethiopia"
             title={

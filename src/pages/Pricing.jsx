@@ -33,7 +33,7 @@ export default function Pricing() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="py-16 lg:py-0">
+      <section className=" lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Simple & Transparent"

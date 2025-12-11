@@ -69,7 +69,7 @@ export default function QRMenu() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl ">
           <HeroSection
             badge="Digital QR Menu"
@@ -99,8 +99,8 @@ export default function QRMenu() {
       <WhyChooseUsSection features={qrWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 ">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className=" sm:py-4">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="The Last Menu You’ll Ever Print"
             title={

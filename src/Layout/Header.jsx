@@ -423,6 +423,7 @@ export default function Header() {
                 <div className="p-6 space-y-4 overflow-y-auto h-full pb-32 flex flex-col justify-between ">
                   <div>
                     <NavLink
+                      onClick={()=> setMobileMenuOpen(false)}
                       to="/"
                       className="font-merienda block text-2xl font-bold text-blue-950 py-3 border-b"
                     >
@@ -537,18 +538,21 @@ export default function Header() {
                     </div>
 
                     <NavLink
+                     onClick={()=> setMobileMenuOpen(false)}
                       to="/pricing"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
                       Pricing
                     </NavLink>
                     <NavLink
+                     onClick={()=> setMobileMenuOpen(false)}
                       to="/resources"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
                       Resources
                     </NavLink>
                     <NavLink
+                     onClick={()=> setMobileMenuOpen(false)}
                       to="/about"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
@@ -567,26 +571,25 @@ export default function Header() {
                       Sign Up
                     </a>
                   </div>
-                  <div>
-                    <div className="border-t border-gray-200 ">
+                    <div className="border-t border bg-blue-100 p-12 rounded-lg">
                       <div className="space-y-5  ">
                         <a
                           href="tel:+251923479921"
-                          className="flex items-center justify-start gap-3 text-xl font-bold text-blue-400 hover:text-blue-950 transition"
+                          className="flex items-center justify-start gap-3 text-xl font-bold text-blue-950 hover:text-blue-950 transition"
                         >
                           <Phone className="h-7 w-7" />
                           +251 923 479 921
                         </a>
                         <a
                           href="mailto:support@menuroom.et"
-                          className="flex items-center justify-start gap-3 text-lg font-medium text-blue-400 hover:text-blue-950 transition"
+                          className="flex items-center justify-start gap-3 text-lg font-medium text-blue-900 hover:text-blue-950 transition"
                         >
                           <Mail className="h-6 w-6" />
                           support@menuroom.et
                         </a>
                       </div>
                     </div>
-                  </div>
+                  
                   <div>
                     {/* Mobile CTA Buttons */}
                     <div className=" flex gap-7">

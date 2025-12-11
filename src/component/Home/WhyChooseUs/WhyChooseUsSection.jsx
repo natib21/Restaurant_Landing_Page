@@ -16,7 +16,7 @@ export const WhyChooseUsSection = ({
         : homeFeatures);
 
   return (
-    <section className={`relative  py-20 lg:pt-9  overflow-hidden ${className}`}>
+    <section className={`relative  py-20 lg:pt-9  overflow-hidden ${className} `}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 ">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 justify-center place-items-center">
           {features.map((feature, i) => (

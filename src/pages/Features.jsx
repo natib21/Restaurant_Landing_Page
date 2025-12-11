@@ -6,7 +6,7 @@ import ReusableFlow from '../component/common/ReusableFlow';
 const Features = () => {
   return (
     <>
-      <section className="bg-white py-16 sm:py-24 lg:py-0">
+      <section className="bg-white  sm:py-24 lg:py-0">
         <div className="mx-auto max-w-7xl ">
           <HeroSection
             badge="All 13 Powerful Features"
@@ -42,7 +42,7 @@ const Features = () => {
             }
             className="text-center"
           >
-            <WhyChooseUsSection features={featuresFeatures} className="" />
+            <WhyChooseUsSection features={featuresFeatures}  />
           </SectionHeader>
         </section>
         <SectionHeader

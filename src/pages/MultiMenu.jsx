@@ -32,33 +32,50 @@ const digitalMenuWhyChooseUs = [
   {
     title: 'Stunning Mobile Design',
     icon: Smartphone,
-    desc: 'Looks beautiful on every phone — no cheap PDF',
+    desc: 'Beautifully designed menus that look perfect on every phone.',
   },
   {
     title: 'Add Food Photos',
     icon: Camera,
-    desc: 'Show your delicious dishes — customers order more',
+    desc: 'Showcase your dishes with photos to increase customer orders.',
   },
   {
     title: 'Your Branding',
     icon: Palette,
-    desc: 'Logo, colors, fonts — feels like your restaurant',
+    desc: 'Customize colors, fonts, and logo to match your restaurant’s style.',
   },
   {
     title: 'Amharic + English',
     icon: Languages,
-    desc: 'Full bilingual — customers switch instantly',
+    desc: 'Bilingual menus let customers switch languages instantly.',
   },
-  { title: 'Update in 1 Second', icon: Zap, desc: 'Change price, hide item — live immediately' },
-  { title: 'Works Offline', icon: Shield, desc: 'Menu loads fast even without internet' },
-  { title: 'Customer Favorites', icon: Heart, desc: 'Highlight most popular items first' },
-  { title: 'Custom Link', icon: Globe, desc: 'menu.yourrestaurant.com — professional URL' },
+  {
+    title: 'Update in 1 Second',
+    icon: Zap,
+    desc: 'Change prices or hide items and see updates live immediately.',
+  },
+  {
+    title: 'Works Offline',
+    icon: Shield,
+    desc: 'Menus load quickly even when there’s no internet connection.',
+  },
+  {
+    title: 'Customer Favorites',
+    icon: Heart,
+    desc: 'Highlight your most popular dishes to boost orders.',
+  },
+  {
+    title: 'Custom Link',
+    icon: Globe,
+    desc: 'Use a professional URL like menu.yourrestaurant.com for easy access.',
+  },
 ];
+
 const MultiMenu = () => {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="The Only Menu System You’ll Ever Need"
@@ -88,8 +105,8 @@ const MultiMenu = () => {
       <WhyChooseUsSection features={digitalMenuWhyChooseUs} />
 
       {/* Intro */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white sm:py-4 ">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="No More Menu Chaos Across Branches"
             title={

@@ -22,33 +22,54 @@ import {
 
 // Why Choose Table Management
 const tableWhyChooseUs = [
-  { title: 'Every Table Has QR', icon: QrCode, desc: 'Print once — customers scan & order' },
+  {
+    title: 'Every Table Has QR',
+    icon: QrCode,
+    desc: 'Print once and let customers scan to order easily.',
+  },
   {
     title: 'Live Table Status',
     icon: TableIcon,
-    desc: 'Free, occupied, needs cleaning — at a glance',
+    desc: 'See free, occupied, or cleaning status instantly.',
   },
   {
     title: 'Call Waiter Button',
     icon: BellRing,
-    desc: 'Customer presses → waiter notified instantly',
+    desc: 'Customers tap once and waiters get instant alerts.',
   },
   {
     title: 'Move & Merge Tables',
     icon: ArrowRightLeft,
-    desc: 'Customer moved? Transfer bill in 2 seconds',
+    desc: 'Move customers or merge bills in seconds anytime.',
   },
-  { title: 'Waiter Assignment', icon: Users, desc: 'Each waiter sees only their tables' },
-  { title: 'Works Offline', icon: Shield, desc: 'Table system runs even without internet' },
-  { title: 'Floor Plan View', icon: Store, desc: 'See your restaurant layout live' },
-  { title: 'Real-Time Updates', icon: Zap, desc: 'Everyone sees the same table status' },
+  {
+    title: 'Waiter Assignment',
+    icon: Users,
+    desc: 'Each waiter only views and manages their tables.',
+  },
+  {
+    title: 'Works Offline',
+    icon: Shield,
+    desc: 'Table features continue working even without internet.',
+  },
+  {
+    title: 'Floor Plan View',
+    icon: Store,
+    desc: 'Visualize your full restaurant layout live anytime.',
+  },
+  {
+    title: 'Real-Time Updates',
+    icon: Zap,
+    desc: 'All staff see synced table status instantly.',
+  },
 ];
+
 
 export default function TableManagement() {
   return (
     <>
-      {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+    
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Smart Table Management"
@@ -78,8 +99,8 @@ export default function TableManagement() {
       <WhyChooseUsSection features={tableWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className=" bg-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="End Table Chaos Forever"
             title={

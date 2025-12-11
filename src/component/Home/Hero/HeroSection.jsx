@@ -23,7 +23,7 @@ export const HeroSection = ({
 }) => {
   return (
     <div
-      className={`relative  overflow-hidden rounded-xl `}
+      className="relative  overflow-hidden rounded-xl px-5 sm:p-0"
       style={{
         backgroundImage: bgImgB && bgImg ? `url(${bgImg})` : 'none',
         backgroundSize: 'cover',

@@ -24,7 +24,7 @@ const MultiBranch = () => {
   return (
     <>
       {/* HERO - Using your REAL HeroSection component correctly */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Multi-Branch & Franchise Ready"
@@ -53,8 +53,8 @@ const MultiBranch = () => {
       <WhyChooseUsSection />
 
       {/* Intro Section */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white ">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="Built for Growing Ethiopian Restaurant Chains"
             title={

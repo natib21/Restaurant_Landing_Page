@@ -23,21 +23,54 @@ import {
 } from 'lucide-react';
 
 const paymentWhyChooseUs = [
-  { title: 'Telebirr', icon: Smartphone, desc: 'Ethiopia’s #1 mobile payment — fully integrated' },
-  { title: 'CBE Birr', icon: CreditCard, desc: 'Commercial Bank of Ethiopia wallet' },
-  { title: 'HelloCash', icon: Wallet, desc: 'Lion Bank & partners' },
-  { title: 'Amole', icon: CreditCard, desc: 'Dashen Bank digital wallet' },
-  { title: 'Ebirr', icon: Smartphone, desc: 'Ethio telecom’s new wallet — ready' },
-  { title: 'M-Birr', icon: Wallet, desc: 'Microfinance institutions wallet' },
-  { title: 'Any New Gateway', icon: PlusCircle, desc: 'We add new ones in days, not months' },
-  { title: 'Cash & Counter Pay', icon: Wallet, desc: 'Traditional still fully supported' },
+  {
+    title: 'Telebirr',
+    icon: Smartphone,
+    desc: 'Ethiopia’s #1 mobile payment fully integrated for fast transactions.',
+  },
+  {
+    title: 'CBE Birr',
+    icon: CreditCard,
+    desc: 'Commercial Bank of Ethiopia wallet — seamless and secure payments.',
+  },
+  {
+    title: 'HelloCash',
+    icon: Wallet,
+    desc: 'Lion Bank & partners — easy digital payments for customers.',
+  },
+  {
+    title: 'Amole',
+    icon: CreditCard,
+    desc: 'Dashen Bank’s digital wallet fully supported in your system.',
+  },
+  {
+    title: 'Ebirr',
+    icon: Smartphone,
+    desc: 'Ethio Telecom’s new wallet — ready for instant transactions.',
+  },
+  {
+    title: 'M-Birr',
+    icon: Wallet,
+    desc: 'Microfinance institutions wallet — reliable and widely accepted.',
+  },
+  {
+    title: 'Any New Gateway',
+    icon: PlusCircle,
+    desc: 'We integrate new payment gateways in days, not months.',
+  },
+  {
+    title: 'Cash & Counter Pay',
+    icon: Wallet,
+    desc: 'Traditional cash and counter payments remain fully supported.',
+  },
 ];
+
 
 const PaymentIntegration = () => {
   return (
     <>
       {/* HERO – Now even bolder */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Works With EVERY Ethiopian Payment Method"
@@ -65,8 +98,8 @@ const PaymentIntegration = () => {
       <WhyChooseUsSection features={paymentWhyChooseUs} />
 
       {/* Intro */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white sm:py-4">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="Never Say “We Don’t Accept That” Again"
             title={

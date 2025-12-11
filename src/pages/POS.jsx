@@ -31,36 +31,44 @@ import {
 } from 'lucide-react';
 
 const posWhyChooseUs = [
-  { title: 'Works Offline', icon: Zap, desc: 'Internet down? Keep selling. Syncs when back.' },
+  {
+    title: 'Works Offline',
+    icon: Zap,
+    desc: 'No internet? Keep selling and auto-sync later.',
+  },
   {
     title: 'Any Android Device',
     icon: Smartphone,
-    desc: 'Phone or tablet — no expensive hardware.',
+    desc: 'Use any phone or tablet—no special hardware.',
   },
-  { title: 'All Ethiopian Payments', icon: Wallet, desc: 'Telebirr, CBE Birr, HelloCash, Cash' },
-  { title: 'Auto Print Receipts', icon: Printer, desc: 'Kitchen + customer receipt instantly' },
+  {
+    title: 'All Ethiopian Payments',
+    icon: Wallet,
+    desc: 'Accept Telebirr, CBE Birr, HelloCash, and cash.',
+  },
+  {
+    title: 'Auto Print Receipts',
+    icon: Printer,
+    desc: 'Instant kitchen and customer receipts always.',
+  },
   {
     title: 'Split & Merge Bills',
     icon: ArrowRightLeft,
-    desc: 'Handle groups and table moves easily',
+    desc: 'Easily manage groups, moves, and shared bills.',
   },
-  { title: 'Fast Local Support', icon: Users, desc: 'Real help from Ethiopia — anytime' },
   {
     title: 'Multi-Branch Control',
     icon: Store,
-    desc: 'Manage all locations from one phone',
+    desc: 'Manage every branch from one simple dashboard.',
   },
-  {
-    title: 'ERCA Compliant Receipts',
-    icon: FileCheck,
-    desc: 'Legal fiscal receipts with QR code — no tax problems',
-  },
+  
 ];
+
 export default function POS() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl">
           <HeroSection
             badge="Modern POS System"
@@ -89,8 +97,8 @@ export default function POS() {
         <WhyChooseUsSection features={posWhyChooseUs} />
 
         {/* MAIN FEATURES */}
-        <section className=" py-4">
-          <div className="mx-auto max-w-7xl">
+        <section className=" sm:py-4">
+          <div className="mx-auto max-w-7xl px-5 sm:px-0">
             <SectionHeader
               badge="Everything Your Cashier Needs"
               title={

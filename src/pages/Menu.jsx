@@ -25,34 +25,50 @@ const digitalMenuWhyChooseUs = [
   {
     title: 'Stunning Mobile Design',
     icon: Smartphone,
-    desc: 'Looks beautiful on every phone — no cheap PDF',
+    desc: 'Beautiful and responsive on every phone — never a boring PDF.',
   },
   {
     title: 'Add Food Photos',
     icon: Camera,
-    desc: 'Show your delicious dishes — customers order more',
+    desc: 'Show your dishes with mouthwatering photos — boost orders.',
   },
   {
     title: 'Your Branding',
     icon: Palette,
-    desc: 'Logo, colors, fonts — feels like your restaurant',
+    desc: 'Use your logo, colors, and fonts — matches your restaurant style.',
   },
   {
     title: 'Amharic + English',
     icon: Languages,
-    desc: 'Full bilingual — customers switch instantly',
+    desc: 'Full bilingual support — switch languages instantly.',
   },
-  { title: 'Update in 1 Second', icon: Zap, desc: 'Change price, hide item — live immediately' },
-  { title: 'Works Offline', icon: Shield, desc: 'Menu loads fast even without internet' },
-  { title: 'Customer Favorites', icon: Heart, desc: 'Highlight most popular items first' },
-  { title: 'Custom Link', icon: Globe, desc: 'menu.yourrestaurant.com — professional URL' },
+  {
+    title: 'Update in 1 Second',
+    icon: Zap,
+    desc: 'Edit prices or hide items — changes appear live immediately.',
+  },
+  {
+    title: 'Works Offline',
+    icon: Shield,
+    desc: 'Menu loads fast even if the internet goes down.',
+  },
+  {
+    title: 'Customer Favorites',
+    icon: Heart,
+    desc: 'Highlight popular items first — boost repeat orders.',
+  },
+  {
+    title: 'Custom Link',
+    icon: Globe,
+    desc: 'Professional URL like menu.yourrestaurant.com for easy sharing.',
+  },
 ];
 
 export default function DigitalMenu() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Digital Menu"
@@ -82,8 +98,8 @@ export default function DigitalMenu() {
       <WhyChooseUsSection features={digitalMenuWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className=" bg-white">
+        <div className="mx-auto max-w-7xl  px-5 sm:px-0">
           <SectionHeader
             badge="The Most Beautiful Menu in Ethiopia"
             title={

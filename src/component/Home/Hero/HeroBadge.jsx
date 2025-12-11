@@ -12,7 +12,7 @@ export const HeroBadge = ({ children }) => (
         fill="currentColor"
       />
     </svg>
-    <span className="font-bold uppercase tracking-wider text-blue-900 font-merienda">
+    <span className="font-bold uppercase tracking-wider text-blue-900 font-merienda ">
       {children}
     </span>
     <svg

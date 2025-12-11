@@ -25,25 +25,53 @@ import {
 
 // Why Choose Customer Management
 const customerWhyChooseUs = [
-  { title: 'Know Your Regulars', icon: UserCheck, desc: 'See who visits most & spends most' },
+  {
+    title: 'Know Your Regulars',
+    icon: UserCheck,
+    desc: 'Identify your frequent visitors and their top spends instantly.',
+  },
   {
     title: 'Chat Directly',
     icon: MessageCircle,
-    desc: 'WhatsApp or in-app chat with any customer',
+    desc: 'Connect via WhatsApp or in-app chat with any customer quickly.',
   },
-  { title: 'Loyalty Points', icon: Gift, desc: 'Reward repeat customers automatically' },
-  { title: 'Smart Reports', icon: BarChart3, desc: 'Top customers, best days, peak hours' },
-  { title: 'Feedback & Reviews', icon: ThumbsUp, desc: 'Collect ratings and comments easily' },
-  { title: 'Order History', icon: FileText, desc: 'See exactly what each customer loves' },
-  { title: 'Birthday Offers', icon: Gift, desc: 'Auto-send free coffee or dessert' },
-  { title: 'Push Notifications', icon: Bell, desc: 'Bring them back with special offers' },
+  {
+    title: 'Loyalty Points',
+    icon: Gift,
+    desc: 'Automatically reward repeat customers and keep them coming back.',
+  },
+  {
+    title: 'Smart Reports',
+    icon: BarChart3,
+    desc: 'Track top customers, peak hours, and your best days effortlessly.',
+  },
+  {
+    title: 'Feedback & Reviews',
+    icon: ThumbsUp,
+    desc: 'Collect ratings and comments easily to improve your service.',
+  },
+  {
+    title: 'Order History',
+    icon: FileText,
+    desc: 'See exactly what each customer loves and personalize offers.',
+  },
+  {
+    title: 'Birthday Offers',
+    icon: Gift,
+    desc: 'Automatically send gifts like free coffee or dessert on birthdays.',
+  },
+  {
+    title: 'Push Notifications',
+    icon: Bell,
+    desc: 'Remind customers about special offers and promotions instantly.',
+  },
 ];
 
 export default function CustomerManagement() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Customer Management"
@@ -73,8 +101,8 @@ export default function CustomerManagement() {
       <WhyChooseUsSection features={customerWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="sm:py-4 bg-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="The Smartest Way to Build Customer Loyalty in Ethiopia"
             title={

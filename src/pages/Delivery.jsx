@@ -28,33 +28,54 @@ const deliveryWhyChooseUs = [
   {
     title: 'Own Riders or 3rd Party',
     icon: Truck,
-    desc: 'Use your riders OR connect DeliverAddis, ZayRide, etc.',
+    desc: 'Use your own delivery team or connect with partners like DeliverAddis and ZayRide seamlessly.',
   },
-  { title: 'Live Order Tracking', icon: MapPin, desc: 'Customer sees rider location in real-time' },
-  { title: 'Auto Dispatch', icon: Zap, desc: 'New order → nearest rider gets it instantly' },
+  {
+    title: 'Live Order Tracking',
+    icon: MapPin,
+    desc: 'Customers can see the exact location of their rider in real-time for transparency.',
+  },
+  {
+    title: 'Auto Dispatch',
+    icon: Zap,
+    desc: 'New orders automatically go to the nearest available rider instantly.',
+  },
   {
     title: 'Cash + Mobile Payment',
     icon: Wallet,
-    desc: 'Pay on delivery or online — both supported',
+    desc: 'Support both cash on delivery and mobile payments for flexibility.',
   },
   {
     title: 'Delivery Zones & Fees',
     icon: Globe,
-    desc: 'Set different fees for Bole, Piassa, Sarbet, etc.',
+    desc: 'Set custom delivery fees for different neighborhoods like Bole, Piassa, Sarbet, etc.',
   },
-  { title: 'Customer Calls Rider', icon: PhoneCall, desc: 'One-tap call from tracking page' },
-  { title: 'Rider App (Android)', icon: Smartphone, desc: 'Free rider app — no training needed' },
-  { title: 'Proof of Delivery', icon: CheckCircle, desc: 'Photo + signature + OTP options' },
+  {
+    title: 'Customer Calls Rider',
+    icon: PhoneCall,
+    desc: 'One-tap call feature from the tracking page for quick communication.',
+  },
+  {
+    title: 'Rider App (Android)',
+    icon: Smartphone,
+    desc: 'Free, user-friendly rider app — no training required to start delivering.',
+  },
+  {
+    title: 'Proof of Delivery',
+    icon: CheckCircle,
+    desc: 'Capture photo, signature, or OTP for secure and verified deliveries.',
+  },
 ];
+
 
 const DeliveryManagement = () => {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
-            bgImgB={true}
+            
             badge="Delivery Management That Actually Works in Ethiopia"
             heading={
               <>
@@ -80,8 +101,8 @@ const DeliveryManagement = () => {
       <WhyChooseUsSection features={deliveryWhyChooseUs} />
 
       {/* Intro */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white sm:py-4  ">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="Stop Losing Delivery Sales"
             title={

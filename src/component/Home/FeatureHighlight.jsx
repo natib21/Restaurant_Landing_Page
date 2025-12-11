@@ -29,7 +29,7 @@ export const FeatureHighlight = ({
 }) => {
   return (
     <article
-      className={` mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:py-10 items-center rounded-none ${zebra ? zebraColor : 'bg-transparent'}
+      className={` mb-10 sm:mb-0 mx-auto grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:py-10 items-center rounded-none ${zebra ? zebraColor : 'bg-transparent'}
       ${zebra ? 'rounded-3xl' : ''}`}
     >
       {/* Image Left */}

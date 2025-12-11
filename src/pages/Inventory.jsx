@@ -28,46 +28,51 @@ const inventoryWhyChooseUs = [
   {
     title: 'Real-Time Stock Tracking',
     icon: Package,
-    desc: 'Know exactly how much teff, coffee, or meat you have — across all branches',
+    desc: 'Monitor exactly how much teff, coffee, or meat you have in all branches.',
   },
   {
     title: 'Low Stock Alerts',
     icon: BellRing,
-    desc: 'Get notified before injera or berbere runs out',
+    desc: 'Receive instant notifications before key ingredients run out.',
   },
   {
     title: 'Works Offline',
     icon: Smartphone,
-    desc: 'Track stock even when internet is down — syncs automatically',
+    desc: 'Track inventory even without internet — data syncs automatically.',
   },
   {
     title: 'Multi-Branch Sync',
     icon: Store,
-    desc: 'See total stock or per-branch — one dashboard',
+    desc: 'View total stock or branch-specific inventory from one dashboard.',
   },
   {
     title: 'Auto Deduct on Sale',
     icon: ArrowDown,
-    desc: 'Every order reduces stock instantly — no manual entry',
+    desc: 'Orders automatically reduce stock — no manual entry needed.',
   },
   {
     title: 'Supplier Management',
     icon: Truck,
-    desc: 'Track who supplies what and when to reorder',
+    desc: 'Easily track suppliers and know when to reorder stock.',
   },
-  { title: 'Waste & Theft Control', icon: AlertTriangle, desc: 'Spot unusual drops instantly' },
+  {
+    title: 'Waste & Theft Control',
+    icon: AlertTriangle,
+    desc: 'Spot unusual stock changes instantly to prevent losses.',
+  },
   {
     title: 'Print Reorder Lists',
     icon: Printer,
-    desc: 'One-click list for market day — no guessing',
+    desc: 'Generate market-ready lists with a single click — no guesswork.',
   },
 ];
+
 
 const Inventory = () => {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Never Run Out of Injera Again"
@@ -96,8 +101,8 @@ const Inventory = () => {
       <WhyChooseUsSection features={inventoryWhyChooseUs} />
 
       {/* Intro */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-white sm:py-4 ">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="Stop Guessing. Start Knowing."
             title={

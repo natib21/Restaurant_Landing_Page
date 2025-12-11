@@ -28,22 +28,51 @@ const orderWhyChooseUs = [
   {
     title: 'No More Shouting',
     icon: Zap,
-    desc: 'Orders fly straight to kitchen — no paper, no noise',
+    desc: 'Orders go straight to the kitchen—no paper or noise.',
   },
-  { title: 'From Any Source', icon: ShoppingCart, desc: 'QR, website, tablet — all in one system' },
-  { title: 'Real-Time Kitchen', icon: BellRing, desc: 'New orders pop up instantly on screen' },
-  { title: 'Track Every Order', icon: Users, desc: 'Know exactly who ordered what' },
-  { title: 'Works Offline', icon: Shield, desc: 'Internet down? Orders still go through' },
-  { title: 'Auto Print Dockets', icon: Printer, desc: 'Kitchen gets order instantly' },
-  { title: 'Delivery Ready', icon: Bike, desc: 'Assign riders, track status live' },
-  { title: 'Multi-Branch Sync', icon: Store, desc: 'All locations see orders in real-time' },
+  {
+    title: 'From Any Source',
+    icon: ShoppingCart,
+    desc: 'QR, website, and tablet orders all flow together.',
+  },
+  {
+    title: 'Real-Time Kitchen',
+    icon: BellRing,
+    desc: 'New orders appear instantly on the kitchen screen.',
+  },
+  {
+    title: 'Track Every Order',
+    icon: Users,
+    desc: 'See who placed orders and follow each step clearly.',
+  },
+  {
+    title: 'Works Offline',
+    icon: Shield,
+    desc: 'Internet issues? Orders continue without interruption.',
+  },
+  {
+    title: 'Auto Print Dockets',
+    icon: Printer,
+    desc: 'Kitchen prints every order instantly and accurately.',
+  },
+  {
+    title: 'Delivery Ready',
+    icon: Bike,
+    desc: 'Assign riders easily and track delivery status live.',
+  },
+  {
+    title: 'Multi-Branch Sync',
+    icon: Store,
+    desc: 'All branches receive and view orders in real-time.',
+  },
 ];
+
 
 export default function OrderManagement() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-white py-16 sm:py-32 lg:py-0">
+      <section className="bg-white sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
             badge="Order Management"
@@ -73,8 +102,8 @@ export default function OrderManagement() {
       <WhyChooseUsSection features={orderWhyChooseUs} />
 
       {/* MAIN FEATURES */}
-      <section className="py-12 bg-white">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className=" bg-white sm:py-4">
+        <div className="mx-auto max-w-7xl px-5 sm:px-0">
           <SectionHeader
             badge="End Paper Chaos Forever"
             title={
