@@ -6,6 +6,7 @@ import { FeatureHighlight } from '../component/Home/FeatureHighlight';
 import ReusableFlow from '../component/common/ReusableFlow';
 import { Link } from 'react-router-dom';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
+import pos from '/images/pos.jpg';
 import {
   Smartphone,
   Zap,
@@ -61,7 +62,6 @@ const posWhyChooseUs = [
     icon: Store,
     desc: 'Manage every branch from one simple dashboard.',
   },
-  
 ];
 
 export default function POS() {
@@ -370,7 +370,7 @@ export default function POS() {
             style={{
               backgroundImage: `
               linear-gradient(to bottom right, rgba(30, 64, 175,0.95), rgba(15, 23, 42, 0.95)),
-              url(${abstractBackground})
+              url(${pos})
             `,
               backgroundSize: 'cover',
               backgroundPosition: 'center',

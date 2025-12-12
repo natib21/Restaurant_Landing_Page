@@ -17,6 +17,12 @@ import MultiMenu from './pages/MultiMenu';
 import Inventory from './pages/Inventory';
 import PaymentIntegration from './pages/PaymentIntegration';
 import DeliveryManagement from './pages/Delivery';
+import Cafee from './pages/Cafee';
+import FastFood from './pages/FastFood';
+import LoungeAndBar from './pages/LoungeAndBars';
+import VirtualKitchen from './pages/VirtualsKitchen';
+import HoteResorts from './pages/HotelsResorts';
+import Bakeries from './pages/Bakeries';
 // import Pricing from "./pages/Pricing";
 // import Resources from "./pages/Resources";
 // import NotFound from "./pages/NotFound";
@@ -63,23 +69,12 @@ function App() {
           <Route path="inventory" element={<Inventory />} />
           <Route path="payment-integration" element={<PaymentIntegration />} />
           <Route path="delivery-managment" element={<DeliveryManagement />} />
-          {/* FEATURES — All in features/ folder */}
-          {/* 
-            <Route index element={<POS />} />
-            <Route path="pos" element={<POS />} />
-            <Route path="order-management" element={<OrderManagement />} />
-            <Route path="menu-management" element={<MenuManagement />} />
-            <Route path="table-management" element={<TableManagement />} />
-            <Route path="qr-code" element={<QRCode />} />
-            <Route path="customer-management" element={<CustomerManagement />} />
-            <Route path="website-builder" element={<WebsiteBuilder />} />
-            <Route path="delivery" element={<Delivery />} />
-            <Route path="reports-analytics" element={<ReportsAnalytics />} />
-            <Route path="multi-branch" element={<MultiBranch />} />
-            <Route path="multi-menu" element={<MultiMenu />} />
-            <Route path="payment-integration" element={<PaymentIntegration />} />
-            <Route path="inventory" element={<Inventory />} />
-           */}
+          <Route path="cafe" element={<Cafee />} />
+          <Route path="fast-food" element={<FastFood />} />
+          <Route path="lounge-bar" element={<LoungeAndBar />} />
+          <Route path="virtual-kitchen" element={<VirtualKitchen />} />
+          <Route path="hotel" element={<HoteResorts />} />
+          <Route path="bakery" element={<Bakeries />} />
 
           {/* RESTAURANT TYPES */}
           {/* <Route path="/for" element={<RestaurantTypesLayout />}>

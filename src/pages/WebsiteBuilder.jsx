@@ -5,6 +5,7 @@ import SectionHeader from '../component/Home/SectionHeader';
 import { FeatureHighlight } from '../component/Home/FeatureHighlight';
 import ReusableFlow from '../component/common/ReusableFlow';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
+import webBuilder from '/images/web_builder.webp';
 import {
   Globe,
   Smartphone,
@@ -248,7 +249,7 @@ export default function WebsiteBuilder() {
           style={{
             backgroundImage: `
               linear-gradient(to bottom right, rgba(30, 64, 175, 0.95), rgba(15, 23, 42, 0.95)),
-              url(${abstractBackground})
+              url(${webBuilder})
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

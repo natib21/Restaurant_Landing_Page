@@ -194,6 +194,18 @@ export default function Header() {
 
       {/* MAIN HEADER */}
       <header className="bg-white sticky top-0 z-40 lg:px-10 px-4 lg:py-1 py-4 ">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-blue-950  lg:hidden -z-10"
+          /*  style={{
+            backgroundImage: `url('/images/abstract.webp')`, // Put this image in public/images/
+            backgroundBlendMode: 'multiply',
+            backgroundPosition:'center 30%'
+          }} */
+          aria-hidden="true"
+        />
+
+        {/* White background only on desktop */}
+        <div className="hidden lg:block absolute inset-0 bg-white -z-10" />
         <nav className="mx-auto flex max-w-7xl items-center justify-between " aria-label="Global">
           {/* Logo */}
           <div className="flex lg:flex-1">
@@ -212,7 +224,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(true)}
               className="  hover:text-blue-900 transition border border-blue-500 p-2"
             >
-              <SquareMenu className="h-full text-gray-700 " />
+              <SquareMenu className="h-full text-white " />
             </button>
           </div>
 
@@ -423,7 +435,7 @@ export default function Header() {
                 <div className="p-6 space-y-4 overflow-y-auto h-full pb-32 flex flex-col justify-between ">
                   <div>
                     <NavLink
-                      onClick={()=> setMobileMenuOpen(false)}
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/"
                       className="font-merienda block text-2xl font-bold text-blue-950 py-3 border-b"
                     >
@@ -538,21 +550,21 @@ export default function Header() {
                     </div>
 
                     <NavLink
-                     onClick={()=> setMobileMenuOpen(false)}
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/pricing"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
                       Pricing
                     </NavLink>
                     <NavLink
-                     onClick={()=> setMobileMenuOpen(false)}
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/resources"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
                       Resources
                     </NavLink>
                     <NavLink
-                     onClick={()=> setMobileMenuOpen(false)}
+                      onClick={() => setMobileMenuOpen(false)}
                       to="/about"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
@@ -571,27 +583,26 @@ export default function Header() {
                       Sign Up
                     </a>
                   </div>
-                    <div className="border-t border bg-blue-100 p-12 rounded-lg">
-                      <div className="space-y-5  ">
-                        <a
-                          href="tel:+251923479921"
-                          className="flex items-center justify-start gap-3 text-xl font-bold text-blue-950 hover:text-blue-950 transition"
-                        >
-                          <Phone className="h-7 w-7" />
-                          +251 923 479 921
-                        </a>
-                        <a
-                          href="mailto:support@menuroom.et"
-                          className="flex items-center justify-start gap-3 text-lg font-medium text-blue-900 hover:text-blue-950 transition"
-                        >
-                          <Mail className="h-6 w-6" />
-                          support@menuroom.et
-                        </a>
-                      </div>
+                  <div className="border-t border bg-blue-100 p-12 rounded-lg">
+                    <div className="space-y-5  ">
+                      <a
+                        href="tel:+251923479921"
+                        className="flex items-center justify-start gap-3 text-xl font-bold text-blue-950 hover:text-blue-950 transition"
+                      >
+                        <Phone className="h-7 w-7" />
+                        +251 923 479 921
+                      </a>
+                      <a
+                        href="mailto:support@menuroom.et"
+                        className="flex items-center justify-start gap-3 text-lg font-medium text-blue-900 hover:text-blue-950 transition"
+                      >
+                        <Mail className="h-6 w-6" />
+                        support@menuroom.et
+                      </a>
                     </div>
-                  
+                  </div>
+
                   <div>
-                    {/* Mobile CTA Buttons */}
                     <div className=" flex gap-7">
                       <a
                         href="https://app.menuroom.et/login"

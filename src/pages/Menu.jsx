@@ -5,6 +5,7 @@ import SectionHeader from '../component/Home/SectionHeader';
 import { FeatureHighlight } from '../component/Home/FeatureHighlight';
 import ReusableFlow from '../component/common/ReusableFlow';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
+import menu from '/images/Menu.jpg';
 import {
   Smartphone,
   Camera,
@@ -231,7 +232,7 @@ export default function DigitalMenu() {
           style={{
             backgroundImage: `
               linear-gradient(to bottom right, rgba(30, 64, 175, 0.95), rgba(15, 23, 42, 0.95)),
-              url(${abstractBackground})
+              url(${menu})
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

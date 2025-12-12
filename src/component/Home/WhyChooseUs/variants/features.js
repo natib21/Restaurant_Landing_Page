@@ -107,4 +107,3 @@ export const featuresFeatures = [
     buttonLink: '/delivery',
   },
 ];
-

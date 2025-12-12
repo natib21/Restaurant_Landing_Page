@@ -6,6 +6,7 @@ import { FeatureHighlight } from '../component/Home/FeatureHighlight';
 import ReusableFlow from '../component/common/ReusableFlow';
 import { Link } from 'react-router-dom';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
+import table from '/images/table.jpg';
 import {
   QrCode,
   Users,
@@ -64,11 +65,9 @@ const tableWhyChooseUs = [
   },
 ];
 
-
 export default function TableManagement() {
   return (
     <>
-    
       <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
@@ -237,7 +236,7 @@ export default function TableManagement() {
           style={{
             backgroundImage: `
               linear-gradient(to bottom right, rgba(30, 64, 175,0.95), rgba(15, 23, 42, 0.95)),
-              url(${abstractBackground})
+              url(${table})
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

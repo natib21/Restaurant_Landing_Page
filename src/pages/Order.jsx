@@ -6,6 +6,7 @@ import { FeatureHighlight } from '../component/Home/FeatureHighlight';
 import ReusableFlow from '../component/common/ReusableFlow';
 import { Link } from 'react-router-dom';
 import abstractBackground from '/images/image_1_1765301758645.jpg';
+import qrOrder from '/images/qr-order.webp';
 
 import {
   ShoppingCart,
@@ -66,7 +67,6 @@ const orderWhyChooseUs = [
     desc: 'All branches receive and view orders in real-time.',
   },
 ];
-
 
 export default function OrderManagement() {
   return (
@@ -240,7 +240,7 @@ export default function OrderManagement() {
           style={{
             backgroundImage: `
               linear-gradient(to bottom right, rgba(30, 64, 175,0.95), rgba(15, 23, 42, 0.95)),
-              url(${abstractBackground})
+              url(${qrOrder})
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

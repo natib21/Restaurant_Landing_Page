@@ -67,7 +67,6 @@ const deliveryWhyChooseUs = [
   },
 ];
 
-
 const DeliveryManagement = () => {
   return (
     <>
@@ -75,7 +74,6 @@ const DeliveryManagement = () => {
       <section className="bg-white  sm:py-32 lg:py-0">
         <div className="mx-auto max-w-7xl px-6">
           <HeroSection
-            
             badge="Delivery Management That Actually Works in Ethiopia"
             heading={
               <>

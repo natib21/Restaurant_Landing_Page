@@ -67,7 +67,6 @@ const inventoryWhyChooseUs = [
   },
 ];
 
-
 const Inventory = () => {
   return (
     <>

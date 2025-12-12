@@ -9,8 +9,8 @@ export const WhyChooseUsCard = ({ title, icon: Icon, desc, buttonText, buttonLin
         {title}
       </h3>
       <p className="font-merienda mt-4 text-sm text-blue-500 group-hover:text-white transition-colors duration-500 leading-relaxed line-clamp-2 min-h-[48px]">
-  {desc}
-</p>
+        {desc}
+      </p>
       {buttonText && buttonLink && (
         <Link
           to={buttonLink}

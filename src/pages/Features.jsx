@@ -42,7 +42,7 @@ const Features = () => {
             }
             className="text-center"
           >
-            <WhyChooseUsSection features={featuresFeatures}  />
+            <WhyChooseUsSection features={featuresFeatures} />
           </SectionHeader>
         </section>
         <SectionHeader

@@ -65,7 +65,6 @@ const paymentWhyChooseUs = [
   },
 ];
 
-
 const PaymentIntegration = () => {
   return (
     <>
