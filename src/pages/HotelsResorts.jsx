@@ -21,33 +21,36 @@ import {
   Utensils,
   Globe,
   ShieldCheck,
+  ArrowRight
 } from 'lucide-react';
 
 const HotelResort = () => {
   return (
     <>
-    <section className="bg-white sm:py-0 lg:py-0">
+      <section className="bg-white sm:py-0 lg:py-0">
         <div className="mx-auto max-w-7xl ">
-      <RestaurantHero
-        leftImage="/images/hotel_res.png"
-        rightImage="/images/hotel_res1.png"
-        badgeText="Trusted by 50+ Hotels & Resorts in Ethiopia"
-        titleMain="Elevate Your"
-        titleHighlight="Guest Experience"
-        subtitle="In-room dining • Poolside orders • Spa bookings • Events\nAll from their phone. Zero interruptions. More revenue."
-        primaryCTAText="Join"
-        accentColor="teal"   // Luxury teal-gold vibe
-      />
-   </div>
+          <RestaurantHero
+            leftImage="/images/hotel_res.png"
+            rightImage="/images/hotel_res1.png"
+            mobileImage="/images/hotel_res.png"
+            badgeText="Trusted by 50+ Hotels & Resorts in Ethiopia"
+            titleMain="Elevate Your"
+            titleHighlight="Guest Experience"
+            subtitle="In-room dining • Poolside orders • Spa bookings • Events\nAll from their phone. Zero interruptions. More revenue."
+            primaryCTAText="Join"
+            accentColor="teal" // Luxury teal-gold vibe
+          />
+        </div>
       </section>
-      <WhyChooseUsSection features={hotelFeatures}/>
+      <WhyChooseUsSection features={hotelFeatures} />
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeader
             badge="The Complete Digital Guest Experience Platform"
             title={
               <>
-                One Platform → <span className="text-teal-700 font-merienda">Total Hotel Control</span>
+                One Platform →{' '}
+                <span className="text-teal-700 font-merienda">Total Hotel Control</span>
                 <br />
                 From Lobby to Last Bite.
               </>
@@ -55,7 +58,9 @@ const HotelResort = () => {
           >
             Room Service • Restaurant • Bar • Spa • Events • Housekeeping Requests
             <br />
-            <span className="font-bold text-teal-700">One system. Five-star service. Higher revenue.</span>
+            <span className="font-bold text-teal-700">
+              One system. Five-star service. Higher revenue.
+            </span>
           </SectionHeader>
 
           {/* In-Room & Poolside Ordering */}
@@ -73,10 +78,26 @@ const HotelResort = () => {
             imageAlt="Guest ordering room service via QR"
             learnMoreLink="/features/in-room"
             features={[
-              { icon: BedDouble, title: 'TV & Table QR', desc: 'Every room has personalized QR menu.' },
-              { icon: Coffee, title: '24/7 Room Service', desc: 'Order breakfast at 3 AM — kitchen gets it instantly.' },
-              { icon: Smartphone, title: 'Pay with Mobile Money', desc: 'Telebirr, CBE Birr, card — charged to room or paid directly.' },
-              { icon: Zap, title: 'Real-Time Kitchen Sync', desc: 'Order appears on kitchen screen instantly.' },
+              {
+                icon: BedDouble,
+                title: 'TV & Table QR',
+                desc: 'Every room has personalized QR menu.',
+              },
+              {
+                icon: Coffee,
+                title: '24/7 Room Service',
+                desc: 'Order breakfast at 3 AM — kitchen gets it instantly.',
+              },
+              {
+                icon: Smartphone,
+                title: 'Pay with Mobile Money',
+                desc: 'Telebirr, CBE Birr, card — charged to room or paid directly.',
+              },
+              {
+                icon: Zap,
+                title: 'Real-Time Kitchen Sync',
+                desc: 'Order appears on kitchen screen instantly.',
+              },
             ]}
           />
 
@@ -89,15 +110,29 @@ const HotelResort = () => {
               <>
                 One Menu, Multiple Outlets
                 <br />
-                <span className="text-teal-700 font-merienda">Restaurant • Bar • Pool • Events</span>
+                <span className="text-teal-700 font-merienda">
+                  Restaurant • Bar • Pool • Events
+                </span>
               </>
             }
             description="Update today’s lobster price once — appears in main restaurant, rooftop bar, and beach club instantly."
             imageSrc="/images/hotel-multi-outlet.jpg"
             features={[
-              { icon: Store, title: 'Central + Outlet Control', desc: 'Different menus, prices, availability per outlet.' },
-              { icon: Utensils, title: 'Event & Banquet Menus', desc: 'Wedding? Conference? Custom menu in seconds.' },
-              { icon: Globe, title: 'Multi-Language Menus', desc: 'English • Amharic • French • Arabic — auto-switch.' },
+              {
+                icon: Store,
+                title: 'Central + Outlet Control',
+                desc: 'Different menus, prices, availability per outlet.',
+              },
+              {
+                icon: Utensils,
+                title: 'Event & Banquet Menus',
+                desc: 'Wedding? Conference? Custom menu in seconds.',
+              },
+              {
+                icon: Globe,
+                title: 'Multi-Language Menus',
+                desc: 'English • Amharic • French • Arabic — auto-switch.',
+              },
               { icon: Wifi, title: 'Works Offline', desc: 'Internet down? Guests keep ordering.' },
             ]}
           />
@@ -115,9 +150,21 @@ const HotelResort = () => {
             description="Guests request anything via QR — housekeeping, maintenance, concierge — routed to the right department instantly."
             imageSrc="/images/hotel-guest-request.jpg"
             features={[
-              { icon: ConciergeBell, title: '100+ Request Types', desc: 'Towel, pillow, iron, airport transfer...' },
-              { icon: BellRing, title: 'Instant Staff Notification', desc: 'Housekeeping sees “Room 512 needs shampoo” immediately.' },
-              { icon: ShieldCheck, title: 'Track & Close Requests', desc: 'Manager sees all open/closed requests in real-time.' },
+              {
+                icon: ConciergeBell,
+                title: '100+ Request Types',
+                desc: 'Towel, pillow, iron, airport transfer...',
+              },
+              {
+                icon: BellRing,
+                title: 'Instant Staff Notification',
+                desc: 'Housekeeping sees “Room 512 needs shampoo” immediately.',
+              },
+              {
+                icon: ShieldCheck,
+                title: 'Track & Close Requests',
+                desc: 'Manager sees all open/closed requests in real-time.',
+              },
             ]}
           />
 
@@ -136,9 +183,21 @@ const HotelResort = () => {
             description="Suggest dessert when they order main course. Promote spa package when they book massage. All automatic."
             imageSrc="/images/hotel-upsell.jpg"
             features={[
-              { icon: DollarSign, title: 'Auto-Suggestions', desc: '“Add fries?” • “Upgrade to ocean view?”' },
-              { icon: Users, title: 'VIP Guest Recognition', desc: 'Know returning guests → offer free dessert.' },
-              { icon: Zap, title: 'Dynamic Pricing', desc: 'Peak season? Happy hour? Prices adjust automatically.' },
+              {
+                icon: DollarSign,
+                title: 'Auto-Suggestions',
+                desc: '“Add fries?” • “Upgrade to ocean view?”',
+              },
+              {
+                icon: Users,
+                title: 'VIP Guest Recognition',
+                desc: 'Know returning guests → offer free dessert.',
+              },
+              {
+                icon: Zap,
+                title: 'Dynamic Pricing',
+                desc: 'Peak season? Happy hour? Prices adjust automatically.',
+              },
             ]}
           />
         </div>
@@ -189,7 +248,9 @@ const HotelResort = () => {
                 className="group inline-flex items-center gap-4 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-600 px-12 py-6 text-2xl font-bold text-white shadow-2xl hover:shadow-teal-500/50 transform hover:scale-105 transition-all duration-300"
               >
                 Start Free 14-Day Trial
-                <span className="transform transition-transform group-hover:translate-x-3">Right Arrow</span>
+                <span className="transform transition-transform group-hover:translate-x-3">
+                  {<ArrowRight/>}
+                </span>
               </a>
 
               <Link

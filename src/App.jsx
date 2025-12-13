@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout/Layout';
 // import ScrollToTop from "./component/ScrollTop";
-
+import { useEffect } from 'react';
 import Home from './pages/Home';
 import Features from './pages/Features';
 import Pricing from './pages/Pricing';
@@ -49,6 +49,18 @@ import Bakeries from './pages/Bakeries';
 // import Inventory from "./features/Inventory/Inventory";
 
 function App() {
+   useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://embed.tawk.to/677283df49e2fd8dfe00696a/1igbl68tu";
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script); // cleanup when component unmounts
+    };
+  }, []);
   return (
     <>
       {/* <ScrollToTop /> */}

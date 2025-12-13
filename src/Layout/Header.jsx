@@ -30,7 +30,13 @@ import {
   Phone,
   Mail,
   SquareMenu,
+  UsersIcon,
+  HelpCircle,
+  FileText,
+  Code 
+
 } from 'lucide-react';
+import { label } from 'framer-motion/client';
 
 const features = [
   { to: '/pos', label: 'POS System', desc: 'Fast & reliable checkout', icon: CreditCard },
@@ -98,7 +104,14 @@ const features = [
     icon: MoveRight,
   },
 ];
-
+const resourcesLinks = [
+  { to: '/about', label: 'About Us', icon: UsersIcon },
+  { to: '/contact', label: 'Contact Us', icon: HelpCircle },
+  { to: '/blog', label: 'Blog & Tips', icon: FileText },
+  { to: '/faq', label: 'FAQ', icon: HelpCircle },
+  {to:'/developer', label:'Developer' ,icon:Code }
+  // Add more as needed: /case-studies, /guides, etc.
+];
 const restaurantTypes = [
   { to: '/cafe', label: 'Cafes & Coffee Shops', icon: Coffee },
   { to: '/hotel', label: 'Hotels & Resorts', icon: Hotel },
@@ -113,6 +126,7 @@ export default function Header() {
   const [langOpen, setLangOpen] = useState(false);
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [restaurantOpen, setRestaurantOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
     setFeaturesOpen(false);
@@ -196,11 +210,6 @@ export default function Header() {
       <header className="bg-white sticky top-0 z-40 lg:px-10 px-4 lg:py-1 py-4 ">
         <div
           className="absolute inset-0 bg-cover bg-center bg-blue-950  lg:hidden -z-10"
-          /*  style={{
-            backgroundImage: `url('/images/abstract.webp')`, // Put this image in public/images/
-            backgroundBlendMode: 'multiply',
-            backgroundPosition:'center 30%'
-          }} */
           aria-hidden="true"
         />
 
@@ -328,22 +337,30 @@ export default function Header() {
             </div>
 
             {/* Restaurant Type Dropdown */}
-            <div className="relative group h-full">
-              <button className="peer h-full flex items-center gap-x-1 text-sm font-semibold text-blue-900 hover:text-blue-600 transition">
+           <div className="h-full" onMouseLeave={()=>setRestaurantOpen(false)}>
+              <button
+              onMouseEnter={()=>setRestaurantOpen(true)}
+                onClick={() => setRestaurantOpen(!restaurantOpen)}
+                className="h-full flex items-center gap-x-1 text-sm font-semibold text-blue-900 hover:text-blue-600 transition relative z-10"
+              >
                 Restaurant type
-                <ChevronDown className="h-4 w-4 transition-transform peer-hover:rotate-180" />
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-300 ${restaurantOpen ? 'rotate-180' : ''}`}
+                />
               </button>
-              <div
-                className="absolute inset-x-0 top-full h-8 pointer-events-none"
-                aria-hidden="true"
-              />
 
+              {/* Invisible bridge for spacing */}
+              <div className="absolute inset-x-0 top-full h-8 pointer-events-none" aria-hidden="true" />
+
+              {/* Restaurant Type Dropdown Panel */}
               <div
-                className="absolute inset-x-0 top-14 left-1/2 -translate-x-1/2 w-max max-w-6xl 
-                opacity-0 invisible scale-95 
-                group-hover:opacity-100 group-hover:visible group-hover:scale-100 
-                transition-all duration-300 ease-out 
-                pointer-events-none group-hover:pointer-events-auto z-50"
+                className={`absolute inset-x-0 top-14 left-1/2 -translate-x-1/2 w-max max-w-6xl z-50 transition-all duration-300 ease-out origin-top ${
+                  restaurantOpen
+                    ? 'opacity-100 visible scale-100'
+                    : 'opacity-0 invisible scale-95 pointer-events-none'
+                }`}
+                onMouseEnter={()=>setRestaurantOpen(true)}
+                onMouseLeave={()=>setRestaurantOpen(false)}
               >
                 <div className="w-max min-w-[500px] max-w-6xl bg-white rounded-sm shadow-2xl overflow-hidden">
                   <div className="grid grid-cols-2 p-2 gap-4">
@@ -351,6 +368,8 @@ export default function Header() {
                       <NavLink
                         key={item.to}
                         to={item.to}
+                        // ← THIS LINE ADDED: closes dropdown when item is clicked
+                        onClick={() => setRestaurantOpen(false)}
                         className="group flex items-center justify-between px-6 py-4 hover:shadow-lg transition-all duration-300"
                       >
                         <div className="flex items-center gap-4">
@@ -376,16 +395,60 @@ export default function Header() {
               Pricing
             </NavLink>
 
-            <NavLink
-              to="/resources"
-              className={({ isActive }) =>
-                `flex items-center h-full text-sm font-semibold transition ${
-                  isActive ? 'text-blue-600 font-extrabold' : 'text-blue-900 hover:text-blue-600'
-                }`
-              }
-            >
-              Resources
-            </NavLink>
+           <div className="relative h-full" onMouseLeave={() => setResourcesOpen(false)}>
+              <button
+                onMouseEnter={() => setResourcesOpen(true)}
+                onClick={() => setResourcesOpen(!resourcesOpen)}
+                className="h-full flex items-center gap-x-1 text-sm font-semibold text-blue-900 hover:text-blue-600 transition relative z-10"
+              >
+                Resources
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-300 ${resourcesOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+
+              {/* Invisible hover bridge */}
+              {/* <div className="absolute inset-x-0 top-full h-8 pointer-events-none" aria-hidden="true" /> */}
+
+              {/* Resources Dropdown Panel */}
+              <div
+                className={`absolute inset-x-0 top-14 left-1/2 -translate-x-1/2 w-max max-w-6xl z-50 transition-all duration-300 ease-out origin-top ${
+                  resourcesOpen
+                    ? 'opacity-100 visible scale-100'
+                    : 'opacity-0 invisible scale-95 pointer-events-none'
+                }`}
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <div className="w-max min-w-[400px] bg-white rounded-sm shadow-2xl ring-1 ring-gray-200 overflow-hidden">
+                  <div className="grid grid-cols-2">
+                    {resourcesLinks.map(item => (
+                      <NavLink
+                        key={item.to}
+                        to={item.to}
+                        onClick={() => setResourcesOpen(false)}
+                        className="flex items-center gap-4 px-8 py-4 hover:bg-blue-50 transition group"
+                      >
+                        <item.icon className="h-7 w-7 text-blue-600 group-hover:text-blue-700" />
+                        <span className="font-medium text-blue-900 group-hover:text-blue-600">
+                          {item.label}
+                        </span>
+                      </NavLink>
+                    ))}
+                  </div>
+
+                  <div className="bg-blue-50 border-t border-blue-200 px-8 py-4">
+                    <a
+                      href="https://menuroom.et/support"
+                      onClick={() => setResourcesOpen(false)}
+                      className="text-sm font-semibold text-blue-900 hover:text-blue-700"
+                    >
+                      Need Help? → Contact Support
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Auth Buttons */}

@@ -45,6 +45,13 @@ const RestaurantHero = ({
       badgeBg: 'bg-orange-100 text-orange-800',
       shadow: 'shadow-orange-500/30',
     },
+    red:{
+      btnBg: 'bg-red-600',
+      btnHover: 'hover:bg-red-700',
+      highlightColor: 'text-red-700',
+      badgeBg: 'bg-red-100 text-red-800',
+      shadow: 'shadow-red-500/30',
+    }
   };
 
   const selectedColors = colorMap[accentColor] || colorMap.amber;
@@ -114,7 +121,7 @@ const RestaurantHero = ({
           {/* Use the new badgeBg variable for the complete class */}
           <HeroBadge>{badgeText}</HeroBadge>
 
-          <h1 className="mt-10 text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white sm:text-gray-900 leading-tight drop-shadow-lg">
+          <h1 className="mt-10 text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white sm:text-gray-700 leading-tight drop-shadow-lg">
             {titleMain}
             <br />
             {/* Use the new highlightColor variable for the complete class */}
