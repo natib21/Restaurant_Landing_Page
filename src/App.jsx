@@ -23,6 +23,10 @@ import LoungeAndBar from './pages/LoungeAndBars';
 import VirtualKitchen from './pages/VirtualsKitchen';
 import HoteResorts from './pages/HotelsResorts';
 import Bakeries from './pages/Bakeries';
+import Contact from './pages/contact'
+import Developer from './pages/Developer';
+import About from './pages/about';
+import Faq from './pages/Faq';
 // import Pricing from "./pages/Pricing";
 // import Resources from "./pages/Resources";
 // import NotFound from "./pages/NotFound";
@@ -87,7 +91,10 @@ function App() {
           <Route path="virtual-kitchen" element={<VirtualKitchen />} />
           <Route path="hotel" element={<HoteResorts />} />
           <Route path="bakery" element={<Bakeries />} />
-
+          <Route path='about' element={<About />} />
+          <Route path='faq' element={<Faq />} />
+          <Route path='developer' element={<Developer />} />
+          <Route path='contact' element={<Contact />} /> 
           {/* RESTAURANT TYPES */}
           {/* <Route path="/for" element={<RestaurantTypesLayout />}>
             <Route index element={<Navigate to="cafe" replace />} />

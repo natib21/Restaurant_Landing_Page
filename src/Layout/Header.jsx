@@ -36,10 +36,14 @@ import {
   Code 
 
 } from 'lucide-react';
-import { label } from 'framer-motion/client';
+
 
 const features = [
-  { to: '/pos', label: 'POS System', desc: 'Fast & reliable checkout', icon: CreditCard },
+  { to: '/pos',
+    label: 'POS System',
+    desc: 'Fast & reliable checkout',
+    icon: CreditCard 
+  },
   { to: 'qr-menu', label: 'QR Code Menu', desc: 'Print once, use forever', icon: QrCode },
   {
     to: '/order',
@@ -107,7 +111,7 @@ const features = [
 const resourcesLinks = [
   { to: '/about', label: 'About Us', icon: UsersIcon },
   { to: '/contact', label: 'Contact Us', icon: HelpCircle },
-  { to: '/blog', label: 'Blog & Tips', icon: FileText },
+  // { to: '/blog', label: 'Blog & Tips', icon: FileText },
   { to: '/faq', label: 'FAQ', icon: HelpCircle },
   {to:'/developer', label:'Developer' ,icon:Code }
   // Add more as needed: /case-studies, /guides, etc.
@@ -619,13 +623,64 @@ export default function Header() {
                     >
                       Pricing
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                       onClick={() => setMobileMenuOpen(false)}
                       to="/resources"
                       className="block text-2xl font-bold text-blue-950 py-3 border-b font-merienda"
                     >
                       Resources
-                    </NavLink>
+                    </NavLink> */}
+
+                    <div>
+                      <button
+                        onClick={() => setResourcesOpen(!resourcesOpen)}
+                        className="w-full font-merienda flex items-center justify-between text-2xl font-bold text-blue-950 py-3 border-b"
+                      >
+                        Resources
+                        <ChevronDown
+                          className={`h-6 w-6 transition ${resourcesOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+
+                      {resourcesOpen && (
+                        <AnimatePresence>
+                          <motion.div
+                            className="mt-4 space-y-3 pl-4 border-l-4 border-blue-200"
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={{
+                              hidden: { opacity: 0 },
+                              visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.08 },
+                              },
+                            }}
+                          >
+                            {resourcesLinks.map(item => (
+                              <motion.div
+                                key={item.to}
+                                variants={{
+                                  hidden: { opacity: 0, x: 40 },
+                                  visible: { opacity: 1, x: 0 },
+                                }}
+                                exit={{ opacity: 0, x: 40 }}
+                                transition={{ duration: 0.25 }}
+                              >
+                                <NavLink
+                                  to={item.to}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="flex items-center gap-4 py-4 px-4 rounded-xl hover:bg-blue-50 transition"
+                                >
+                                  <item.icon className="h-9 w-9 text-blue-600" />
+                                  <span className="font-medium text-blue-900">{item.label}</span>
+                                </NavLink>
+                              </motion.div>
+                            ))}
+                          </motion.div>
+                        </AnimatePresence>
+                      )}
+                    </div>
                     <NavLink
                       onClick={() => setMobileMenuOpen(false)}
                       to="/about"
